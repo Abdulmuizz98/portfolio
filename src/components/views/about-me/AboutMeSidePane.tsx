@@ -23,7 +23,7 @@ const AboutMeSidePane: FC = () => {
         name="personal-info"
         classes=""
         dropdownBody={
-          <div className="flex flex-col gap-2 py-3">
+          <div className="flex flex-col gap-2 my-3">
             <NestedDropdown name="bio" payload={bio} iconColor="#E99287" />
             <NestedDropdown
               name="interests"
@@ -42,7 +42,7 @@ const AboutMeSidePane: FC = () => {
         name="contacts"
         classes="border-t"
         dropdownBody={
-          <div className="form-check flex flex-col px-5 gap-3 my-5 text-11">
+          <div className="form-check flex flex-col px-5 gap-2 my-3 text-11">
             <a
               href="mailto:hamzatabdulmuizz98@gmail.com"
               className="flex items-center gap-3"
