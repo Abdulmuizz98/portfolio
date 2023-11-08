@@ -1,6 +1,7 @@
 // import { a, Nava } from "react-router-dom";
+import { FC } from "react";
 
-const Header = () => {
+const Header: FC = () => {
   const toggleHamburgerMenu = () => {
     const menuBtn = document.querySelector(".ham-icon");
     const menu = document.querySelector(".ham-menu");
@@ -14,18 +15,21 @@ const Header = () => {
 
   return (
     <header>
-      <div className="container bg-blue  mt-4 md:mt-7 xl:mt-16 mx-auto rounded-t-lg relative ">
-        <nav className="border border-gray">
-          <ul className="flex h-14 items-center ">
+      <div className="container bg-blue mt-4 md:mt-7 mx-auto  relative ">
+        <nav className="border border-gray rounded-t-lg">
+          <ul className="flex h-10 items-center ">
             <li className="">
-              <a href="/" className="px-8 py-auto flex h-14 items-center">
+              <a
+                href="/"
+                className="px-5 py-auto flex mr-24  h-10 items-center"
+              >
                 abdulmuizz-hamzat
               </a>
             </li>
             <li className="hidden xl:block">
               <a
                 href="/"
-                className="px-8 py-auto border-x border-gray flex ml-36 h-14 items-center"
+                className="px-5 py-auto border-x border-gray flex h-10 items-center"
               >
                 _hello
               </a>
@@ -33,7 +37,7 @@ const Header = () => {
             <li className="hidden xl:block">
               <a
                 href="/about-me"
-                className="px-8 py-auto border-r border-gray flex h-14 items-center"
+                className="px-5 py-auto border-r border-gray flex h-10 items-center"
               >
                 _about-me
               </a>
@@ -41,7 +45,7 @@ const Header = () => {
             <li className="hidden xl:block">
               <a
                 href="/projects"
-                className="px-8 py-auto border-r border-gray flex h-14 items-center"
+                className="px-5 py-auto border-r border-gray flex h-10 items-center"
               >
                 _projects
               </a>
@@ -49,7 +53,7 @@ const Header = () => {
             <li className="ml-auto hidden xl:block">
               <a
                 href="/contact-me"
-                className="px-8 py-auto border-l border-gray flex h-14 items-center"
+                className="px-5 py-auto border-l border-gray flex h-10 items-center"
               >
                 _contact-me
               </a>
@@ -71,7 +75,7 @@ const Header = () => {
             <li className="">
               <a
                 href="/"
-                className="px-8 border-y border-gray flex h-14 w-full items-center"
+                className="px-5 border-y border-gray flex h-10 w-full items-center"
               >
                 _hello
               </a>
@@ -79,7 +83,7 @@ const Header = () => {
             <li className="">
               <a
                 href="/about-me"
-                className="px-8 border-y border-gray flex h-14 w-full items-center"
+                className="px-5 border-y border-gray flex h-10 w-full items-center"
               >
                 _about-me
               </a>
@@ -87,7 +91,7 @@ const Header = () => {
             <li className="">
               <a
                 href="/projects"
-                className="px-8 border-y border-gray flex h-14 w-full items-center"
+                className="px-5 border-y border-gray flex h-10 w-full items-center"
               >
                 _projects
               </a>
@@ -95,7 +99,7 @@ const Header = () => {
             <li className="">
               <a
                 href="/contact-me"
-                className="px-8 border-y border-gray flex h-14 w-full items-center"
+                className="px-5 border-y border-gray flex h-10 w-full items-center"
               >
                 _contact-me
               </a>

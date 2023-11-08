@@ -1,6 +1,6 @@
 const Home = () => {
   return (
-    <div className="flex h-full w-full  justify-center items-center  xl:gap-x-12 xxl:gap-x-24">
+    <div className="flex main-height border-x border-gray w-full  justify-center items-center  xl:gap-x-12 xxl:gap-x-24">
       <div className="intro w-4/5 xl:w-auto">
         <p className="text-white text-lg font-medium">Hi all, I am</p>
         <p className="text-white text-5xl md:text-6xl xl:text-5xl xxl:text-6xl my-4">
@@ -10,7 +10,7 @@ const Home = () => {
           &gt; Full-stack Software Engineer
         </p>
 
-        <p className="hidden xl:block font-medium text-sm xl:text-base">
+        <p className="hidden xl:block font-medium text-sm xl:text-basse">
           // Never hurts to play a game before you continue...
         </p>
         <p className="my-2 font-medium text-sm xl:text-base">
@@ -21,7 +21,7 @@ const Home = () => {
           <span className="text-green">githubLink</span>{" "}
           <span className="text-white">=</span>{" "}
           <a className="text-red" href="https://github.com/abdulmuizz98">
-            "https://github.com/abdulmuizz98"
+            "https://github.com/abdulmuizz98";
           </a>
         </p>
       </div>
