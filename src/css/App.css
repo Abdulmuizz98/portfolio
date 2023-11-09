@@ -74,10 +74,10 @@ nav {
   position: relative;
 }
 
-.game-container {
+/* .game-container {
   width: 510px;
   height: 475px;
-}
+} */
 
 .ham-icon {
   cursor: pointer;

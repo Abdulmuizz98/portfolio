@@ -7,7 +7,7 @@ const ContactMeMain: FC = () => {
       <div className="w-full h-8 border-b border-gray flex">
         {" "}
         <div className="tech-selection border-r border-gray px-5 flex items-center gap-10">
-          contact-me
+          contacts
         </div>
       </div>
       <ContactMeForm />

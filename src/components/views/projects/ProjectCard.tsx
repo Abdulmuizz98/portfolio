@@ -57,12 +57,12 @@ const ProjectCard: FC<ProjectCardProps> = (project) => {
             alt={`The ${project.name} project showcase`}
           />
           {project.techs.length ? (
-            <div className="techs-container absolute top-4 right-4 flex flex-col justify-between gap-2">
+            <div className="techs-container absolute top-3 right-3 flex flex-col justify-between gap-1">
               {project.techs.map(
                 (tech) =>
                   tech in technologies && (
                     <div
-                      className="icon-container w-6 h-6 rounded-sm flex items-center justify-center text-black"
+                      className="icon-container w-4 h-4 rounded-sm flex items-center justify-center text-black"
                       style={{ backgroundColor: getColor(tech) }}
                     >
                       {technologies[`${tech}`]}

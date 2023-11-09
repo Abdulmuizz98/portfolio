@@ -22,14 +22,6 @@ const AboutMeMain: FC = () => {
       <div className="w-full h-8 border-b border-gray flex">
         <div className="tech-selection border-r border-gray px-5 flex items-center gap-2">
           {sectionName}
-          {/* <span
-            style={{
-              transform: "rotate(-90deg)",
-              //   height: "10px",
-            }}
-          >
-            <ApCaretDown />
-          </span> */}
           {` ==> `} {highlight}
         </div>
       </div>

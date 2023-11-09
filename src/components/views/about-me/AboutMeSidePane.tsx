@@ -13,8 +13,8 @@ const AboutMeSidePane: FC = () => {
         dropdownBody={
           <div className="flex flex-col gap-2 my-3">
             <NestedDropdown section={bio} iconColor="#E99287" />
-            <NestedDropdown section={interests} iconColor="#E99287" />
-            <NestedDropdown section={education} iconColor="#E99287" />
+            <NestedDropdown section={interests} iconColor="#43D9AD" />
+            <NestedDropdown section={education} iconColor="#3A49A4" />
           </div>
         }
       />
