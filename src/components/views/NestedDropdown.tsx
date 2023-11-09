@@ -3,18 +3,12 @@ import { ApCaretDown, ApMd } from "../../Icon";
 import { PiFolderFill } from "react-icons/pi";
 import { NestedDropdownProp } from "../Types";
 
-const NestedDropdown: FC<NestedDropdownProp> = ({
-  section,
-  classes,
-  iconColor,
-}) => {
-  const [isOpen, setIsOpen] = useState(false);
+const NestedDropdown: FC<NestedDropdownProp> = ({ section, iconColor }) => {
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
     <>
-      <div
-        className={`dropdown-title flex items-center text-white px-5 gap-3 ${classes}`}
-      >
+      <div className={"dropdown-title flex items-center text-white px-5 gap-3"}>
         <button
           type="button"
           onClick={() => setIsOpen(!isOpen)}

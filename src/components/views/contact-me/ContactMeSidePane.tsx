@@ -4,7 +4,7 @@ import { ApLink, ApMail, ApPhone } from "../../../Icon";
 
 const ContactMeSidePane: FC = () => {
   return (
-    <div className="side-pane w-4  border-r border-gray">
+    <div className="side-pane w-4  border-r border-gray overflow-y-scroll">
       <Dropdown
         name="contacts"
         classes=""

@@ -1,6 +1,5 @@
 export interface NestedDropdownProp {
   section: Section;
-  classes: string;
   iconColor: string;
 }
 

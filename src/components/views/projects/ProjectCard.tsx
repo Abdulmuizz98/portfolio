@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { ProjectCardProps, Technologies } from "./ProjectTypes";
+import { ProjectCardProps, Technologies } from "./projectTypes";
 import {
   SiTypescript,
   SiJavascript,

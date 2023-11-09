@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { ProjectsSidePaneProps } from "./ProjectTypes";
+import { ProjectsSidePaneProps } from "./projectTypes";
 import { useAppDispatch } from "../../store/hooks";
 import { addChecked, removeUnchecked } from "../../store/checkedSlice";
 import Dropdown from "../Dropdown";
@@ -17,7 +17,7 @@ const ProjectsSidePane: FC<ProjectsSidePaneProps> = ({ technologies }) => {
   };
 
   return (
-    <div className="side-pane w-4 border-r border-gray">
+    <div className="side-pane w-4 border-r border-gray overflow-y-scroll">
       <Dropdown
         name="projects"
         dropdownBody={

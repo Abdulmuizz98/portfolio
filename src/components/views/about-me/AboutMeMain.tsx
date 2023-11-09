@@ -4,7 +4,9 @@ import Prism from "prismjs";
 import "prismjs/plugins/line-numbers/prism-line-numbers";
 import { getInfoSet } from "../../../utils";
 import { useParams } from "react-router-dom";
-import { ApCaretDown } from "../../../Icon";
+import profilePic from "../../../assets/profile_pic.svg";
+import vrHeadset from "../../../assets/vr_headset.png";
+import botSleep from "../../../assets/bot_sleeping.png";
 
 const AboutMeMain: FC = () => {
   useEffect(() => {
@@ -18,15 +20,15 @@ const AboutMeMain: FC = () => {
   const { info, sectionName } = getInfoSet(highlight);
 
   return (
-    <div className="main w-full border-l border-gray overflow-hidden">
-      <div className="w-full h-8 border-b border-gray flex">
+    <div className="main w-full border-l border-gray flex flex-col">
+      <div className="w-full flex-shrink-0 h-8 border-b border-gray flex">
         <div className="tech-selection border-r border-gray px-5 flex items-center gap-2">
           {sectionName}
           {` ==> `} {highlight}
         </div>
       </div>
-      <div className="flex  w-full h-full">
-        <article className="about-me-ide w-1/2 overflow-scroll border-r border-gray py-20 ">
+      <div className="flex flex-1 w-full overflow-hidden">
+        <article className="about-me-ide w-1/2 overflow-y-scroll border-r border-gray py-20 ">
           <div className="ide-container">
             <pre className="line-numbers">
               <Routes>
@@ -48,7 +50,10 @@ const AboutMeMain: FC = () => {
             </pre>
           </div>
         </article>
-        <div className="dev-hero"></div>
+        <div className="dev-hero w-1/2 py-20 overflow-y-scroll flex flex-col gap-24 items-center ">
+          <img className="w-32" src={profilePic} alt="" />
+          <img className="w-64" src={botSleep} alt="" />
+        </div>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import { FC } from "react";
 import ProjectCard from "./ProjectCard";
-import { ProjectsMainProps } from "./ProjectTypes";
+import { ProjectsMainProps } from "./projectTypes";
 import { ApClose } from "../../../Icon";
 import { useAppSelector, useAppDispatch } from "../../store/hooks";
 import { removeAll } from "../../store/checkedSlice";
@@ -24,8 +24,8 @@ const ProjectsMain: FC<ProjectsMainProps> = ({ projects }) => {
     : projects;
 
   return (
-    <div className="main border-l border-gray overflow-hidden">
-      <div className="w-full h-8 border-b border-gray flex">
+    <div className="main border-l border-gray flex flex-col">
+      <div className="w-full flex-shrink-0 h-8 border-b border-gray flex">
         {checkedTech.length ? (
           <div className="tech-selection border-r border-gray px-5 flex items-center gap-10">
             <p>
@@ -39,7 +39,7 @@ const ProjectsMain: FC<ProjectsMainProps> = ({ projects }) => {
           </div>
         ) : null}
       </div>
-      <div className="projects flex flex-wrap p-14 justify-between gap-y-10 overflow-scroll main-height">
+      <div className="projects p-14 flex flex-wrap justify-between gap-y-10 overflow-y-scroll">
         {filteredProjects.length &&
           filteredProjects.map((project, idx) => (
             <ProjectCard

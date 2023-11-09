@@ -6,7 +6,7 @@ import { bio, interests, education } from "../../../Data";
 
 const AboutMeSidePane: FC = () => {
   return (
-    <div className="side-pane w-4  border-r border-gray">
+    <div className="side-pane w-4  border-r border-gray overflow-y-scroll">
       <Dropdown
         name="personal-info"
         classes=""

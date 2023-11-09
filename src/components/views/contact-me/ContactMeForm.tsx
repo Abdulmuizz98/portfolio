@@ -63,8 +63,11 @@ const ContactMeForm = () => {
   useEffect(() => emailjs.init("T1BhyrQyBegwOZnEZ"), []);
 
   return (
-    <div className="flex  w-full overflow-scroll h-full">
-      <form onSubmit={formik.handleSubmit} className="w-5/12 py-20">
+    <div className="flex flex-1 w-full overflow-hidden items-stretch">
+      <form
+        onSubmit={formik.handleSubmit}
+        className="w-5/12 py-20 overflow-y-scroll"
+      >
         {!sent ? (
           <div className="form-container">
             <label htmlFor="name" className="w-full block mb-1">
@@ -136,7 +139,7 @@ const ContactMeForm = () => {
         )}
         <ToastContainer />
       </form>
-      <div className="form-ide w-7/12 border-l border-gray py-20 ">
+      <div className="form-ide w-7/12 border-l border-gray py-20 overflow-y-scroll">
         <div className="ide-container">
           <pre className="line-numbers">
             <code className="language-js">

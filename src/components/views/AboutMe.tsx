@@ -4,7 +4,7 @@ import AboutMeMain from "./about-me/AboutMeMain";
 
 const AboutMe: FC = () => {
   return (
-    <section className="contact-me flex main-height border-x border-gray w-full border  ">
+    <section className="about-me w-full main-height flex border border-gray ">
       <AboutMeSidePane />
       <AboutMeMain />
     </section>
