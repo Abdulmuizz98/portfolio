@@ -18,9 +18,9 @@ function App() {
         <div className="container bg-blue mx-auto ">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about-me" element={<AboutMe />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/contact-me" element={<ContactMe />} />
+            <Route path="about-me/*" element={<AboutMe />} />
+            <Route path="projects" element={<Projects />} />
+            <Route path="contact-me" element={<ContactMe />} />
           </Routes>
         </div>
       </main>

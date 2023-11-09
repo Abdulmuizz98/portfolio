@@ -1,16 +1,10 @@
 import { FC, useState } from "react";
-import { ApCaretDown, ApFolder, ApMd } from "../../Icon";
+import { ApCaretDown, ApMd } from "../../Icon";
 import { PiFolderFill } from "react-icons/pi";
+import { NestedDropdownProp } from "../Types";
 
-interface NestedDropdownProp {
-  name: string;
-  payload: Array;
-  classes: string;
-  iconColor: string;
-}
 const NestedDropdown: FC<NestedDropdownProp> = ({
-  name,
-  payload,
+  section,
   classes,
   iconColor,
 }) => {
@@ -30,16 +24,15 @@ const NestedDropdown: FC<NestedDropdownProp> = ({
         </button>
         <p className="flex gap-3 items-center">
           {" "}
-          <PiFolderFill color={iconColor} /> {name}
+          <PiFolderFill color={iconColor} /> {section.name}
         </p>
       </div>
       {isOpen && (
         <div className="dropdown-body px-5 flex flex-col gap-3">
-          {payload.map((el) => (
-            <a href="" className="flex pl-6 gap-3 items-center">
-              {" "}
+          {section.payload.map((info, idx) => (
+            <a href="" className="flex pl-6 gap-3 items-center" key={idx}>
               <ApMd />
-              {el.section}
+              {info.highlight}
             </a>
           ))}
         </div>

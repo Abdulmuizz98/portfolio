@@ -1,20 +1,8 @@
 import { FC } from "react";
 import Dropdown from "../Dropdown";
-import { ApLink, ApMail, ApPhone } from "../../../Icon";
+import { ApMail, ApPhone } from "../../../Icon";
 import NestedDropdown from "../NestedDropdown";
 import { bio, interests, education } from "../../../Data";
-
-//   <div className="form-check flex flex-col px-5 gap-3 my-5 text-11">
-//     <a href="" className="flex items-center gap-3">
-//       <ApLink /> Github
-//     </a>
-//     <a href="" className="flex items-center gap-3">
-//       <ApLink /> LinkedIn
-//     </a>
-//     <a href="" className="flex items-center gap-3">
-//       <ApLink /> Twitter
-//     </a>
-//   </div>
 
 const AboutMeSidePane: FC = () => {
   return (
@@ -24,17 +12,9 @@ const AboutMeSidePane: FC = () => {
         classes=""
         dropdownBody={
           <div className="flex flex-col gap-2 my-3">
-            <NestedDropdown name="bio" payload={bio} iconColor="#E99287" />
-            <NestedDropdown
-              name="interests"
-              payload={interests}
-              iconColor="#E99287"
-            />
-            <NestedDropdown
-              name="education"
-              payload={education}
-              iconColor="#E99287"
-            />
+            <NestedDropdown section={bio} iconColor="#E99287" />
+            <NestedDropdown section={interests} iconColor="#E99287" />
+            <NestedDropdown section={education} iconColor="#E99287" />
           </div>
         }
       />
