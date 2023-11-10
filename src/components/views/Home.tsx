@@ -1,6 +1,6 @@
 const Home = () => {
   return (
-    <div className="home w-full main-height border flex flex-col  border-gray overflow-scroll py-20">
+    <div className="home w-full main-height mb-4 md:mb-7 lg:mb-0 border lg:flex flex-col border-gray rounded-b-lg lg:rounded-none  overflow-scroll py-20">
       <div className="my-auto">
         <div className="flex justify-center items-center xl:gap-x-12">
           <div className="intro w-4/5 xl:w-1/3">

@@ -85,6 +85,7 @@ nav {
   height: 24px;
   position: relative;
   right: 32px;
+  top: 3px;
   transition: all 0.25s;
 }
 
@@ -136,9 +137,18 @@ nav {
 }
 
 .main-height {
-  height: calc(100vh - 2 * (68px));
+  /* main height for home with only header;
+  subtract size of both header from screen height;
+  PS: margin size is included */
+  min-height: calc(100vh - (74px));
 }
 
+.alt-main-height {
+  /* main height for home with both footer and header;
+  subtract size of both header and footer from screen height;
+  PS: margin size is included */
+  min-height: calc(100vh - (116px));
+}
 .custom-btn {
   color: #e5e9f0;
   background-color: #1c2b3a;
@@ -178,4 +188,10 @@ nav {
 svg#caret {
   height: 12px;
   width: 12px;
+}
+
+@media (min-width: 976px) {
+  .main-height {
+    height: calc(100vh - 2 * (68px));
+  }
 }

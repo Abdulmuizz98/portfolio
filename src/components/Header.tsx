@@ -5,19 +5,21 @@ const Header: FC = () => {
   const toggleHamburgerMenu = () => {
     const menuBtn = document.querySelector(".ham-icon");
     const menu = document.querySelector(".ham-menu");
-    const footer = document.querySelector(".footer-small");
+    const footer = document.querySelector("footer");
+    const home = document.querySelector(".home");
 
     menuBtn?.classList.toggle("open");
     menu?.classList.toggle("hidden");
     footer?.classList.toggle("hidden");
-    footer?.classList.toggle("flex");
+    home?.classList.toggle("rounded-b-lg");
+    home?.classList.toggle("hidden");
   };
 
   return (
     <header>
-      <div className="container bg-blue mt-4 md:mt-7 mx-auto  relative ">
+      <div className="container bg-blue mt-4 md:mt-7 mx-auto ">
         <nav className="border border-gray rounded-t-lg">
-          <ul className="flex h-10 items-center ">
+          <ul className="flex h-10 items-center">
             <li className="">
               <a
                 href="/"
@@ -26,7 +28,7 @@ const Header: FC = () => {
                 abdulmuizz-hamzat
               </a>
             </li>
-            <li className="hidden xl:block">
+            <li className="hidden lg:block">
               <a
                 href="/"
                 className="px-5 py-auto border-x border-gray flex h-10 items-center"
@@ -34,7 +36,7 @@ const Header: FC = () => {
                 _hello
               </a>
             </li>
-            <li className="hidden xl:block">
+            <li className="hidden lg:block">
               <a
                 href="/about-me"
                 className="px-5 py-auto border-r border-gray flex h-10 items-center"
@@ -42,7 +44,7 @@ const Header: FC = () => {
                 _about-me
               </a>
             </li>
-            <li className="hidden xl:block">
+            <li className="hidden lg:block">
               <a
                 href="/projects"
                 className="px-5 py-auto border-r border-gray flex h-10 items-center"
@@ -50,7 +52,7 @@ const Header: FC = () => {
                 _projects
               </a>
             </li>
-            <li className="ml-auto hidden xl:block">
+            <li className="ml-auto hidden lg:block">
               <a
                 href="/contact-me"
                 className="px-5 py-auto border-l border-gray flex h-10 items-center"
@@ -58,7 +60,7 @@ const Header: FC = () => {
                 _contact-me
               </a>
             </li>
-            <li className="xl:hidden ml-auto">
+            <li className="lg:hidden ml-auto">
               <button
                 onClick={() => toggleHamburgerMenu()}
                 className="ham-icon"
@@ -70,7 +72,7 @@ const Header: FC = () => {
             </li>
           </ul>
         </nav>
-        <nav className="ham-menu hidden absolute w-full z-10 xl:hidden h-screen bg-blue text-white">
+        <nav className="ham-menu hidden w-full lg:hidden alt-main-height bg-blue text-white border-x border-gray">
           <ul>
             <li className="">
               <a

@@ -2,9 +2,9 @@ import { ApGithub, ApLinkedIn, ApTwitter } from "../Icon";
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="container bg-blue mb-4 md:mb-7 h-10 mx-auto  ">
-        <ul className="hidden xl:flex h-10 items-center border border-gray rounded-b-lg">
+    <footer className="footer hidden lg:block">
+      <div className="container h-10 bg-blue mb-4 md:mb-7 mx-auto  ">
+        <ul className="footer-lg hidden lg:flex h-10 items-center border border-gray rounded-b-lg">
           <li className="">
             <p className="px-5 py-auto flex h-10 items-center">find me on:</p>
           </li>
@@ -34,7 +34,7 @@ const Footer = () => {
             </a>
           </li>
         </ul>
-        <ul className="footer-small hidden h-10 w-100 items-center border border-gray">
+        <ul className="footer-sm flex lg:hidden h-10 w-100 items-center border border-gray rounded-b-lg">
           <li className="">
             <p className="px-5 py-auto flex h-10 items-center">find me on:</p>
           </li>

@@ -50,9 +50,9 @@ const AboutMeMain: FC = () => {
             </pre>
           </div>
         </article>
-        <div className="dev-hero w-1/2 py-20 overflow-y-scroll flex flex-col gap-24 items-center ">
+        <div className="dev-hero w-1/2 py-20 overflow-y-scroll flex flex-col gap-16 items-center ">
           <img className="w-32" src={profilePic} alt="" />
-          <img className="w-64" src={botSleep} alt="" />
+          <img className="w-32" src={botSleep} alt="" />
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import { FC, useState } from "react";
 import { ApCaretDown, ApMd } from "../../Icon";
 import { PiFolderFill } from "react-icons/pi";
-import { NestedDropdownProp } from "../Types";
+import { NestedDropdownProp } from "../types";
 
 const NestedDropdown: FC<NestedDropdownProp> = ({ section, iconColor }) => {
   const [isOpen, setIsOpen] = useState(true);
