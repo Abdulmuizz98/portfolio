@@ -1,24 +1,30 @@
-// import { a, Nava } from "react-router-dom";
-import { FC } from "react";
+import { useAppDispatch } from "./store/hooks";
+import { FC, useState } from "react";
+import { toggleMenu } from "./store/menuSlice";
 
 const Header: FC = () => {
+  // const [isOpenMenu, setIsOpenMenu] = useState(false);
+  const dispatch = useAppDispatch();
+
   const toggleHamburgerMenu = () => {
     const menuBtn = document.querySelector(".ham-icon");
     const menu = document.querySelector(".ham-menu");
-    const footer = document.querySelector("footer");
-    const home = document.querySelector(".home");
+    // const footer = document.querySelector("footer");
+    const page = document.querySelector(".page");
 
     menuBtn?.classList.toggle("open");
+    dispatch(toggleMenu());
+
     menu?.classList.toggle("hidden");
-    footer?.classList.toggle("hidden");
-    home?.classList.toggle("rounded-b-lg");
-    home?.classList.toggle("hidden");
+    // footer?.classList.toggle("hidden");
+    // home?.classList.toggle("rounded-b-lg");
+    page?.classList.toggle("hidden");
   };
 
   return (
     <header>
       <div className="container bg-blue mt-4 md:mt-7 mx-auto ">
-        <nav className="border border-gray rounded-t-lg">
+        <nav className="border-t border-x border-gray rounded-t-lg">
           <ul className="flex h-10 items-center">
             <li className="">
               <a
@@ -72,7 +78,7 @@ const Header: FC = () => {
             </li>
           </ul>
         </nav>
-        <nav className="ham-menu hidden w-full lg:hidden alt-main-height bg-blue text-white border-x border-gray">
+        <nav className="ham-menu hidden w-full lg:hidden alt-main-height bg-blue text-white border-x border-b border-gray">
           <ul>
             <li className="">
               <a

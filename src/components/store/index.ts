@@ -1,11 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import checkedSlice from "./checkedSlice";
+import menuSlice from "./menuSlice";
 // ...
 
 const store = configureStore({
   reducer: {
     checked: checkedSlice.reducer,
-    // comments: commentsReducer,
+    menu: menuSlice.reducer,
     // users: usersReducer,
   },
 });

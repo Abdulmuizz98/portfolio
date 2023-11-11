@@ -6,10 +6,10 @@ import { bio, interests, education } from "../../../Data";
 
 const AboutMeSidePane: FC = () => {
   return (
-    <div className="side-pane border-r border-gray overflow-y-scroll">
+    <div className="side-pane overflow-y-scroll">
       <Dropdown
         name="personal-info"
-        classes=""
+        classes="lg:border-t-0"
         dropdownBody={
           <div className="flex flex-col gap-2 my-3">
             <NestedDropdown section={bio} iconColor="#E99287" />

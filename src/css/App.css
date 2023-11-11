@@ -15,9 +15,10 @@ input::placeholder,
 textarea::placeholder {
   color: #607b96;
 }
-Style the focus outline input:focus,
+/* Style the focus outline input:focus, */
+input:not([type="checkbox"]):focus,
 textarea:focus {
-  outline: 2px solid #607b96;
+  outline: 1px solid #607b96;
   outline-offset: 1px;
 }
 
@@ -129,14 +130,14 @@ nav {
 }
 
 .main-height {
-  /* main height for home with only header;
+  /* main height for page with only header;
   subtract size of both header from screen height;
   PS: margin size is included */
   min-height: calc(100vh - (74px));
 }
 
 .alt-main-height {
-  /* main height for home with both footer and header;
+  /* main height for page with both footer and header;
   subtract size of both header and footer from screen height;
   PS: margin size is included */
   min-height: calc(100vh - (116px));
@@ -153,12 +154,19 @@ nav {
 
 .form-container {
   width: 50%;
+  padding: 5px;
   min-width: 275px;
   margin: 0 auto;
 }
 
 .ide-container {
-  width: 50%;
+  width: 80%;
+  min-width: 400px;
+  margin: 0 auto;
+}
+
+.info-container {
+  width: 100%;
   min-width: 400px;
   margin: 0 auto;
 }
@@ -184,6 +192,11 @@ svg#caret {
 
 @media (min-width: 976px) {
   .main-height {
+    min-height: initial;
+    height: calc(100vh - 2 * (68px));
+  }
+  .alt-main-height {
+    min-height: initial;
     height: calc(100vh - 2 * (68px));
   }
   .side-pane {

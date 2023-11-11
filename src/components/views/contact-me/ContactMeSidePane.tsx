@@ -4,12 +4,12 @@ import { ApLink, ApMail, ApPhone } from "../../../Icon";
 
 const ContactMeSidePane: FC = () => {
   return (
-    <div className="side-pane w-4  border-r border-gray overflow-y-scroll">
+    <div className="side-pane overflow-y-scroll">
       <Dropdown
         name="contacts"
-        classes=""
+        classes="border-t-0"
         dropdownBody={
-          <div className="form-check flex flex-col px-5 gap-2 my-3 text-11">
+          <div className="form-check flex flex-col px-8 lg:px-5 gap-2 my-3 text-11">
             <a
               href="mailto:hamzatabdulmuizz98@gmail.com"
               className="flex items-center gap-3"
@@ -26,7 +26,7 @@ const ContactMeSidePane: FC = () => {
         name="find-me-also-on"
         classes="border-t border-gray"
         dropdownBody={
-          <div className="form-check flex flex-col px-5 gap-2 my-3 text-11">
+          <div className="form-check flex flex-col px-8 lg:px-5 gap-2 my-3 text-11">
             <a href="" className="flex items-center gap-3">
               <ApLink /> Github
             </a>

@@ -24,7 +24,7 @@ const ProjectsMain: FC<ProjectsMainProps> = ({ projects }) => {
     : projects;
 
   return (
-    <div className="main border-l border-gray flex flex-col">
+    <div className="main lg:border-l border-gray flex flex-col">
       <div className="w-full flex-shrink-0 lg:h-8 lg:border-b border-gray flex">
         {checkedTech.length ? (
           <div className="tech-selection lg:border-r border-gray px-8 lg:px-5 flex items-center gap-10  pt-7 pb-4 lg:py-0">

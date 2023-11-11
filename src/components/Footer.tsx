@@ -1,10 +1,21 @@
+import { useLocation } from "react-router-dom";
 import { ApGithub, ApLinkedIn, ApTwitter } from "../Icon";
+import { useAppSelector } from "./store/hooks";
 
 const Footer = () => {
+  const { pathname } = useLocation();
+  const isOpen = useAppSelector((state) => state.menu.isOpen);
+
+  console.log(pathname);
+
   return (
-    <footer className="footer hidden lg:block">
+    <footer
+      className={`footer ${
+        pathname === "/" && !isOpen ? "hidden" : ""
+      } lg:block`}
+    >
       <div className="container h-10 bg-blue mb-4 md:mb-7 mx-auto  ">
-        <ul className="footer-lg hidden lg:flex h-10 items-center border border-gray rounded-b-lg">
+        <ul className="footer-lg hidden lg:flex h-10 items-center border-b border-x border-gray rounded-b-lg">
           <li className="">
             <p className="px-5 py-auto flex h-10 items-center">find me on:</p>
           </li>
@@ -34,7 +45,7 @@ const Footer = () => {
             </a>
           </li>
         </ul>
-        <ul className="footer-sm flex lg:hidden h-10 w-100 items-center border border-gray rounded-b-lg">
+        <ul className="footer-sm flex lg:hidden h-10 w-100 items-center border-b border-x border-gray rounded-b-lg">
           <li className="">
             <p className="px-5 py-auto flex h-10 items-center">find me on:</p>
           </li>

@@ -66,7 +66,7 @@ const ContactMeForm = () => {
     <div className="flex flex-1 w-full overflow-hidden items-stretch">
       <form
         onSubmit={formik.handleSubmit}
-        className="w-5/12 py-20 overflow-y-scroll"
+        className="mx-auto lg:mx-0 lg:w-5/12 py-14 lg:py-20 overflow-y-scroll "
       >
         {!sent ? (
           <div className="form-container">
@@ -139,7 +139,7 @@ const ContactMeForm = () => {
         )}
         <ToastContainer />
       </form>
-      <div className="form-ide w-7/12 border-l border-gray py-20 overflow-y-scroll">
+      <div className="form-ide hidden lg:block w-7/12 border-l border-gray py-20 overflow-y-scroll">
         <div className="ide-container">
           <pre className="line-numbers">
             <code className="language-js">

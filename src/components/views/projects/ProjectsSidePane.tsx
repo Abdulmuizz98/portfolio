@@ -17,9 +17,10 @@ const ProjectsSidePane: FC<ProjectsSidePaneProps> = ({ technologies }) => {
   };
 
   return (
-    <div className="side-pane border-r border-gray overflow-y-scroll">
+    <div className="side-pane overflow-y-scroll">
       <Dropdown
         name="projects"
+        classes="lg:border-t-0"
         dropdownBody={
           <>
             {" "}
