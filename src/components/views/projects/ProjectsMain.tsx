@@ -25,21 +25,38 @@ const ProjectsMain: FC<ProjectsMainProps> = ({ projects }) => {
 
   return (
     <div className="main border-l border-gray flex flex-col">
-      <div className="w-full flex-shrink-0 h-8 border-b border-gray flex">
+      <div className="w-full flex-shrink-0 lg:h-8 lg:border-b border-gray flex">
         {checkedTech.length ? (
-          <div className="tech-selection border-r border-gray px-5 flex items-center gap-10">
+          <div className="tech-selection lg:border-r border-gray px-8 lg:px-5 flex items-center gap-10  pt-7 pb-4 lg:py-0">
             <p>
+              <span className="text-white font-medium lg:text-gray-light">
+                <span className="lg:hidden">// </span>projects
+              </span>
+              {` > `}
               {checkedTech.map((tech) => (
                 <>{tech}; </>
               ))}
             </p>
-            <button type="button" onClick={handleClear}>
+            <button
+              type="button"
+              className="hidden lg:block"
+              onClick={handleClear}
+            >
               <ApClose />
             </button>
           </div>
-        ) : null}
+        ) : (
+          <div className="tech-selection lg:border-r border-gray px-8 lg:px-5 flex items-center gap-10 pt-7 pb-4 lg:py-0 lg:hidden">
+            <p>
+              <span className="text-white font-medium lg:text-gray-light">
+                // projects
+              </span>
+              {` > `} all
+            </p>
+          </div>
+        )}
       </div>
-      <div className="projects p-14 flex flex-wrap justify-between gap-y-10 overflow-y-scroll">
+      <div className="projects px-14 pb-14 lg:py-14 flex flex-wrap justify-around gap-y-10 overflow-y-scroll">
         {filteredProjects.length &&
           filteredProjects.map((project, idx) => (
             <ProjectCard

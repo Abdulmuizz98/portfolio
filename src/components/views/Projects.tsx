@@ -156,7 +156,8 @@ const projects = [
 
 const Projects: FC = () => {
   return (
-    <section className="projects flex main-height border-x border-gray w-full  ">
+    <section className="projects w-full main-height flex flex-col lg:flex-row border border-gray">
+      <h2 className="text-white lg:hidden py-5 px-8 font-medium">_projects</h2>
       <ProjectsSidePane technologies={technologies} />
       <ProjectsMain projects={projects} />
     </section>

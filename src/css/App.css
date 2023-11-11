@@ -38,7 +38,7 @@ input[type="checkbox"] + label::before {
   text-align: center;
   height: 17px;
   width: 17px;
-  left: 20px;
+  left: 32px;
   /* top: 0px; */
   background-color: #011627;
   border-radius: 2px;
@@ -52,7 +52,7 @@ input[type="checkbox"]:checked + label::before {
   text-align: center;
   height: 17px;
   width: 17px;
-  left: 20px;
+  left: 32px;
   /* top: 2.5px; */
   background-color: #607b96;
   border-radius: 2px;
@@ -63,7 +63,7 @@ input[type="checkbox"]:checked + label::after {
   content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="white" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>');
   display: block;
   position: absolute;
-  left: 23px;
+  left: 35.3px;
   top: 1.75px;
 }
 
@@ -128,14 +128,6 @@ nav {
   transform: rotate(-45deg) translateY(6px) translate(-6px);
 }
 
-.side-pane {
-  width: 258.4px;
-}
-
-.main {
-  width: calc(100% - 258.4px);
-}
-
 .main-height {
   /* main height for home with only header;
   subtract size of both header from screen height;
@@ -193,5 +185,22 @@ svg#caret {
 @media (min-width: 976px) {
   .main-height {
     height: calc(100vh - 2 * (68px));
+  }
+  .side-pane {
+    width: 258.4px;
+  }
+  .main {
+    width: calc(100% - 258.4px);
+  }
+  input[type="checkbox"] + label::before {
+    left: 20px;
+  }
+
+  input[type="checkbox"]:checked + label::before {
+    left: 20px;
+  }
+
+  input[type="checkbox"]:checked + label::after {
+    left: 23px;
   }
 }

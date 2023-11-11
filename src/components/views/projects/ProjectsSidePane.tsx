@@ -17,7 +17,7 @@ const ProjectsSidePane: FC<ProjectsSidePaneProps> = ({ technologies }) => {
   };
 
   return (
-    <div className="side-pane w-4 border-r border-gray overflow-y-scroll">
+    <div className="side-pane border-r border-gray overflow-y-scroll">
       <Dropdown
         name="projects"
         dropdownBody={
@@ -25,7 +25,7 @@ const ProjectsSidePane: FC<ProjectsSidePaneProps> = ({ technologies }) => {
             {" "}
             {technologies.length &&
               technologies.map(({ name, icon }) => (
-                <div className="form-check flex items-center px-5 gap-3 my-3 text-11">
+                <div className="form-check flex items-center px-8 lg:px-5 gap-3 my-3 text-11">
                   <input
                     type="checkbox"
                     onChange={hanleCheckboxChange}

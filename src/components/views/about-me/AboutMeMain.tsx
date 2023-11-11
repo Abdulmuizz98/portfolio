@@ -5,7 +5,6 @@ import "prismjs/plugins/line-numbers/prism-line-numbers";
 import { getInfoSet } from "../../../utils";
 import { useParams } from "react-router-dom";
 import profilePic from "../../../assets/profile_pic.svg";
-import vrHeadset from "../../../assets/vr_headset.png";
 import botSleep from "../../../assets/bot_sleeping.png";
 
 const AboutMeMain: FC = () => {
@@ -21,36 +20,55 @@ const AboutMeMain: FC = () => {
 
   return (
     <div className="main w-full border-l border-gray flex flex-col">
-      <div className="w-full flex-shrink-0 h-8 border-b border-gray flex">
-        <div className="tech-selection border-r border-gray px-5 flex items-center gap-2">
+      <div className="w-full flex-shrink-0 lg:h-8 lg:border-b border-gray flex">
+        <div className="tech-selection flex w-full lg:w-auto border-r border-gray px-8 lg:px-5 pt-7 pb-4 lg:py-0 items-center gap-2">
+          <span className="text-white font-medium lg:text-gray-light">
+            <span className="lg:hidden">//</span> personal_info
+          </span>{" "}
+          {` > `}
           {sectionName}
-          {` ==> `} {highlight}
+          {` > `} {highlight}
         </div>
       </div>
-      <div className="flex flex-1 w-full overflow-hidden">
-        <article className="about-me-ide w-1/2 overflow-y-scroll border-r border-gray py-20 ">
-          <div className="ide-container">
-            <pre className="line-numbers">
-              <Routes>
-                <Route
-                  path=":highlight"
-                  element={
-                    highlight ? (
-                      <code className="language-js">{info.content}</code>
-                    ) : null
-                  }
-                />
-                <Route
-                  path=""
-                  element={
-                    <code className="language-js">{`// This is the intro`}</code>
-                  }
-                />
-              </Routes>
-            </pre>
+      <div className="flex flex-col lg:flex-row lg:flex-1 w-full overflow-hidden">
+        <article className="about-me-ide lg:w-1/2 overflow-y-scroll border-r border-gray lg:py-20 ">
+          <div className="">
+            <Routes>
+              <Route
+                path=":highlight"
+                element={
+                  highlight ? (
+                    <>
+                      <pre className="ide-container line-numbers hidden lg:block ">
+                        <code className="language-js">{info.content}</code>
+                      </pre>
+                      <p className="lg:hidden px-8 leading-loose">
+                        {info.content}
+                      </p>
+                    </>
+                  ) : null
+                }
+              />
+              <Route
+                path=""
+                element={
+                  <>
+                    <pre className="ide-container line-numbers hidden lg:block">
+                      <code className="language-js">{`// This is the intro`}</code>
+                    </pre>
+                    <p className="lg:hidden px-8 ">{`// This is the intro`}</p>
+                  </>
+                }
+              />
+            </Routes>
           </div>
         </article>
-        <div className="dev-hero w-1/2 py-20 overflow-y-scroll flex flex-col gap-16 items-center ">
+        <div className="flex lg:w-auto border-r border-gray px-8 lg:px-5 lg:hidden pt-7 pb-4 lg:py-0 items-center gap-2">
+          <span className="text-white font-medium lg:text-gray-light">
+            // showcase:
+          </span>
+        </div>
+        <div className="dev-hero lg:w-1/2 py-20 overflow-y-scroll flex flex-col gap-16 items-center ">
           <img className="w-32" src={profilePic} alt="" />
           <img className="w-32" src={botSleep} alt="" />
         </div>

@@ -20,7 +20,7 @@ const personalInfoData = {
       {
         highlight: "skills",
         content:
-          "Lorem ipsum dolor amet and askdjfaslk ajdkfjs  akdfjas lfjdlf a",
+          "Lorem ipsum dolor amet and askdjfaslk ajdkfjs akdfjas lfjdlf a Lorem ipsum dolor amet and askdjfaslk ajdkfjs akdfjas lfjdlf aLorem ipsum  dolor amet and askdjfaslk ajdkfjs  akdfjas lfjdlf aLorem ipsum dolor amet and askdjfaslk ajdkfjs  akdfjas lfjdlf aLorem ipsum dolor amet and askdjfaslk ajdkfjs  akdfjas lfjdlf aLorem ipsum dolor amet and askdjfaslk ajdkfjs  akdfjas lfjdlf aLorem ipsum dolor amet and askdjfaslk ajdkfjs  akdfjas lfjdlf a",
       },
     ],
   },

@@ -23,7 +23,7 @@ const Header: FC = () => {
             <li className="">
               <a
                 href="/"
-                className="px-5 py-auto flex mr-24  h-10 items-center"
+                className="px-8  py-auto flex mr-24  h-10  items-center lg:px-5"
               >
                 abdulmuizz-hamzat
               </a>

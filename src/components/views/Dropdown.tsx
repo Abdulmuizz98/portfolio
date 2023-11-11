@@ -7,7 +7,7 @@ const Dropdown = ({ name, dropdownBody, classes }) => {
   return (
     <>
       <div
-        className={`dropdown-title h-8 border-b border-gray flex items-center text-white px-5 gap-3 ${classes}`}
+        className={`dropdown-title h-8 border-y border-gray bg-gray mt-1 lg:bg-blue lg:mt-0 flex items-center text-white px-8 lg:px-5 gap-3 ${classes}`}
       >
         <button
           type="button"
