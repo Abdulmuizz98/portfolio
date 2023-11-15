@@ -10,5 +10,6 @@ export interface Section {
 
 export interface Info {
   highlight: string;
-  content: string;
+  contentSmScreen: string;
+  contentLgScreem: string;
 }

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ApTriangleDown } from "../../Icon";
+import { ApTriangleDown } from "../Icon";
 
 const Dropdown = ({ name, dropdownBody, classes }) => {
   const [isOpen, setIsOpen] = useState(true);

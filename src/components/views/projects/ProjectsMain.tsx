@@ -2,8 +2,8 @@ import { FC } from "react";
 import ProjectCard from "./ProjectCard";
 import { ProjectsMainProps } from "./projectTypes";
 import { ApClose } from "../../../Icon";
-import { useAppSelector, useAppDispatch } from "../../store/hooks";
-import { removeAll } from "../../store/checkedSlice";
+import { useAppSelector, useAppDispatch } from "../../../store/hooks";
+import { removeAll } from "../../../store/checkedSlice";
 
 const ProjectsMain: FC<ProjectsMainProps> = ({ projects }) => {
   const checkedTech = useAppSelector((state) => state.checked.checkedTech);
@@ -11,7 +11,7 @@ const ProjectsMain: FC<ProjectsMainProps> = ({ projects }) => {
 
   const handleClear = () => {
     checkedTech.forEach((tech) => {
-      const checkbox = document.getElementById(tech);
+      const checkbox = document.getElementById(tech) as HTMLInputElement;
       checkbox.checked = false;
     });
     dispatch(removeAll());
@@ -43,6 +43,7 @@ const ProjectsMain: FC<ProjectsMainProps> = ({ projects }) => {
               onClick={handleClear}
             >
               <ApClose />
+              {""}
             </button>
           </div>
         ) : (

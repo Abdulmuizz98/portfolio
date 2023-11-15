@@ -1,5 +1,5 @@
 import { FC } from "react";
-import Dropdown from "../Dropdown";
+import Dropdown from "../../Dropdown";
 import { ApLink, ApMail, ApPhone } from "../../../Icon";
 
 const ContactMeSidePane: FC = () => {

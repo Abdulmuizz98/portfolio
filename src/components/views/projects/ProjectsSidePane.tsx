@@ -1,15 +1,15 @@
 import { FC } from "react";
 import { ProjectsSidePaneProps } from "./projectTypes";
-import { useAppDispatch } from "../../store/hooks";
-import { addChecked, removeUnchecked } from "../../store/checkedSlice";
-import Dropdown from "../Dropdown";
+import { useAppDispatch } from "../../../store/hooks";
+import { addChecked, removeUnchecked } from "../../../store/checkedSlice";
+import Dropdown from "../../Dropdown";
 
 const ProjectsSidePane: FC<ProjectsSidePaneProps> = ({ technologies }) => {
   const dispatch = useAppDispatch();
 
-  const hanleCheckboxChange = (e) => {
+  const hanleCheckboxChange = (e: Event) => {
     // console.log(e.target.id);
-    if (e.target.checked) {
+    if (e.target!.checked!) {
       dispatch(addChecked(e.target.id));
     } else {
       dispatch(removeUnchecked(e.target.id));

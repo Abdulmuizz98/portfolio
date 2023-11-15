@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { ApGithub, ApLinkedIn, ApTwitter } from "../Icon";
-import { useAppSelector } from "./store/hooks";
+import { useAppSelector } from "../store/hooks";
 
 const Footer = () => {
   const { pathname } = useLocation();

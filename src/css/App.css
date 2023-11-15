@@ -5,7 +5,9 @@
 @tailwind utilities;
 
 body {
-  background-color: #011627;
+  /* background-color: #011627; */
+  background-color: #010c15;
+
   color: #607b96;
   font-family: "Fira Code", monospace;
   font-size: 12px;
@@ -152,6 +154,28 @@ nav {
   display: inline-block;
 }
 
+.alt-custom-btn-1 {
+  color: #01080e;
+  background-color: #fea55f;
+  border-radius: 8px;
+  font-size: 10px;
+  padding: 7px 7px;
+  margin-top: 10px;
+  display: inline-block;
+}
+.alt-custom-btn-2 {
+  background-color: #011627;
+  border-radius: 8px;
+  font-size: 10px;
+  padding: 7px 4px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.center-x {
+  left: 50%;
+  transform: translateX(-50%);
+}
 .form-container {
   width: 50%;
   padding: 5px;
@@ -216,4 +240,27 @@ svg#caret {
   input[type="checkbox"]:checked + label::after {
     left: 23px;
   }
+}
+
+/* GAME */
+div.game-grid {
+  /* outline: 1px solid red; */
+  width: calc(6px * 25);
+  position: relative;
+}
+
+.game-body {
+  height: calc(6px * 48);
+  width: 300px;
+}
+
+.game-board {
+  /* border: 2px solid red; */
+  width: 130px;
+}
+.game-container {
+  /* background: linear-gradient(67deg, #175553, rgba(67, 217, 173, 0.13)); */
+  background: url("../assets/Background.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }

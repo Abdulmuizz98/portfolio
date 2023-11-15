@@ -1,13 +1,14 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { configureStore, PayloadAction } from "@reduxjs/toolkit";
 import checkedSlice from "./checkedSlice";
 import menuSlice from "./menuSlice";
+import gameSlice from "./gameSlice";
 // ...
 
 const store = configureStore({
   reducer: {
     checked: checkedSlice.reducer,
     menu: menuSlice.reducer,
-    // users: usersReducer,
+    game: gameSlice.reducer,
   },
 });
 
@@ -17,3 +18,11 @@ export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
 
 export default store;
+
+export function dispatchAsync(action: () => PayloadAction<void | string | []>) {
+  return new Promise((resolve) => {
+    console.log("I entered dispath async o ");
+    store.dispatch(action());
+    resolve(1);
+  });
+}

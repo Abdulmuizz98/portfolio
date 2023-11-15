@@ -1,23 +1,19 @@
-import { useAppDispatch } from "./store/hooks";
-import { FC, useState } from "react";
-import { toggleMenu } from "./store/menuSlice";
+import { useAppDispatch } from "../store/hooks";
+import { FC } from "react";
+import { toggleMenu } from "../store/menuSlice";
 
 const Header: FC = () => {
-  // const [isOpenMenu, setIsOpenMenu] = useState(false);
   const dispatch = useAppDispatch();
 
   const toggleHamburgerMenu = () => {
-    const menuBtn = document.querySelector(".ham-icon");
+    const menuBtn = document.querySelector(".ham-icon") as HTMLButtonElement;
     const menu = document.querySelector(".ham-menu");
-    // const footer = document.querySelector("footer");
     const page = document.querySelector(".page");
 
     menuBtn?.classList.toggle("open");
     dispatch(toggleMenu());
 
     menu?.classList.toggle("hidden");
-    // footer?.classList.toggle("hidden");
-    // home?.classList.toggle("rounded-b-lg");
     page?.classList.toggle("hidden");
   };
 
@@ -68,10 +64,11 @@ const Header: FC = () => {
             </li>
             <li className="lg:hidden ml-auto">
               <button
+                type="button"
                 onClick={() => toggleHamburgerMenu()}
                 className="ham-icon"
               >
-                <span className="ham-top ham"></span>
+                <span className="ham-top ham">{""}</span>
                 <span className="ham-middle ham"></span>
                 <span className="ham-bottom ham"></span>
               </button>

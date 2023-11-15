@@ -1,7 +1,7 @@
 import { FC, useState } from "react";
-import { ApCaretDown, ApMd } from "../../Icon";
+import { ApCaretDown, ApMd } from "../Icon";
 import { PiFolderFill } from "react-icons/pi";
-import { NestedDropdownProp } from "../types";
+import { NestedDropdownProp } from "./types";
 
 const NestedDropdown: FC<NestedDropdownProp> = ({ section, iconColor }) => {
   const [isOpen, setIsOpen] = useState(true);
@@ -19,6 +19,7 @@ const NestedDropdown: FC<NestedDropdownProp> = ({ section, iconColor }) => {
           style={{ transform: `${isOpen ? "rotate(0deg)" : "rotate(-90deg)"}` }}
         >
           <ApCaretDown />
+          {""}
         </button>
         <p className="flex gap-3 items-center">
           {" "}

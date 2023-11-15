@@ -32,7 +32,6 @@ const AboutMeMain: FC = () => {
       </div>
       <div className="flex flex-col lg:flex-row lg:flex-1 w-full overflow-hidden">
         <article className="about-me-ide lg:w-2/3 overflow-y-scroll border-r border-gray lg:p-5 xl:pr-16">
-          {/* <div className=""> */}
           <Routes>
             <Route
               path=":highlight"
@@ -41,11 +40,11 @@ const AboutMeMain: FC = () => {
                   <>
                     <pre className="info-container line-numbers hidden xl:block ">
                       <code className="language-js">
-                        {info.contentLgScreen}
+                        {info?.contentLgScreen}
                       </code>
                     </pre>
                     <p className="xl:hidden px-8 leading-loose">
-                      {info.contentSmScreen}
+                      {info?.contentSmScreen}
                     </p>
                   </>
                 ) : null
@@ -63,7 +62,6 @@ const AboutMeMain: FC = () => {
               }
             />
           </Routes>
-          {/* </div> */}
         </article>
         <div className="flex lg:w-auto border-r border-gray px-8 lg:px-5 lg:hidden pt-7 pb-4 lg:py-0 items-center gap-2">
           <span className="text-white font-medium lg:text-gray-light">

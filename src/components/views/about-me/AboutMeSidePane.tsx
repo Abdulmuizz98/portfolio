@@ -1,7 +1,7 @@
 import { FC } from "react";
-import Dropdown from "../Dropdown";
+import Dropdown from "../../Dropdown";
 import { ApMail, ApPhone } from "../../../Icon";
-import NestedDropdown from "../NestedDropdown";
+import NestedDropdown from "../../NestedDropdown";
 import { bio, interests, education } from "../../../Data";
 
 const AboutMeSidePane: FC = () => {
