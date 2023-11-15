@@ -12,6 +12,12 @@ body {
   font-family: "Fira Code", monospace;
   font-size: 12px;
 }
+.home {
+  /* background-image: url("./assets/backround_blur_sm.png"); */
+  background: url("../assets/background_blur_sm.png");
+  background-repeat: no-repeat;
+  background-position: 40% bottom;
+}
 
 input::placeholder,
 textarea::placeholder {
@@ -101,9 +107,6 @@ nav {
   top: 0;
   transform: rotate(0);
   transition: all 0.5s;
-}
-
-.ham-top {
 }
 
 .ham-middle {
@@ -215,13 +218,19 @@ svg#caret {
 }
 
 @media (min-width: 976px) {
+  .home {
+    background: url("../assets/background_blur_lg.png");
+    background-repeat: no-repeat;
+    background-size: 60% 120%;
+    background-position: 100% 30%;
+  }
   .main-height {
     min-height: initial;
-    height: calc(100vh - 2 * (68px));
+    height: calc(100vh - 2 * (48.7px));
   }
   .alt-main-height {
     min-height: initial;
-    height: calc(100vh - 2 * (68px));
+    height: calc(100vh - 2 * (48.7px));
   }
   .side-pane {
     width: 258.4px;

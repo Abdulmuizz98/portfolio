@@ -1,6 +1,6 @@
 import { size, newPoint, Player } from "./snakeLinkedList";
 import type { DivOrNull, PlayerOrNull } from "./gameTypes";
-import { NodeInterface, GameInterface } from "./gameTypes";
+import { NodeInterface, GameInterface, PointType } from "./gameTypes";
 import {
   nextLevel,
   reduceLeft,
@@ -15,6 +15,29 @@ const cols = 25;
 const posY = rows - 1;
 const posX = cols - 1;
 const initialSpeed = 100;
+
+const turnHead = (head: NodeInterface, key: string) => {
+  const pointRef = head.ref;
+  pointRef!.style.borderRadius = "0";
+  switch (key) {
+    case "ArrowUp":
+      pointRef!.style.borderTopLeftRadius = "50%";
+      pointRef!.style.borderTopRightRadius = "50%";
+      break;
+    case "ArrowDown":
+      pointRef!.style.borderBottomLeftRadius = "50%";
+      pointRef!.style.borderBottomRightRadius = "50%";
+      break;
+    case "ArrowLeft":
+      pointRef!.style.borderTopLeftRadius = "50%";
+      pointRef!.style.borderBottomLeftRadius = "50%";
+      break;
+    case "ArrowRight":
+      pointRef!.style.borderTopRightRadius = "50%";
+      pointRef!.style.borderBottomRightRadius = "50%";
+      break;
+  }
+};
 
 // SNAKE MOVEMENT HELPER
 const doMove = (node: NodeInterface, key: string) => {
@@ -38,7 +61,8 @@ const doMove = (node: NodeInterface, key: string) => {
       newX = node.x == posX ? 0 : node.x + 1;
       break;
   }
-  node.move(newY, newX);
+  turnHead(node, key);
+  node.move(newY, newX, key);
 };
 
 const isNeckPosition = (direction: string, node: NodeInterface) => {
@@ -174,7 +198,7 @@ class Game implements GameInterface {
 
   drawFood() {
     const position = this.getNextFoodCoord();
-    this.foodRef = newPoint(position[0], position[1], "cyan", size);
+    this.foodRef = newPoint(position[0], position[1], size, PointType.Food);
     return { y: position[0], x: position[1] };
   }
 

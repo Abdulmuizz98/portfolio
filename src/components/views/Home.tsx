@@ -28,7 +28,7 @@ const Home = () => {
             <p className="text-white text-5xl md:text-6xl lg:text-4xl my-2">
               Abdulmuizz Hamzat
             </p>
-            <p className="text-green text-xl lg:text-cyan xl:text-lg font-medium mb-40 lg:mb-12">
+            <p className="text-green text-xl lg:text-cyan xl:text-lg font-medium mb-72 lg:mb-12">
               &gt; Full-stack Software Engineer
             </p>
 

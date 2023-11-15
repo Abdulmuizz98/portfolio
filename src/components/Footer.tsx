@@ -14,7 +14,7 @@ const Footer = () => {
         pathname === "/" && !isOpen ? "hidden" : ""
       } lg:block`}
     >
-      <div className="container h-10 bg-blue mb-4 md:mb-7 mx-auto  ">
+      <div className="container h-10 bg-blue mb-4 md:mb-2 mx-auto  ">
         <ul className="footer-lg hidden lg:flex h-10 items-center border-b border-x border-gray rounded-b-lg">
           <li className="">
             <p className="px-5 py-auto flex h-10 items-center">find me on:</p>

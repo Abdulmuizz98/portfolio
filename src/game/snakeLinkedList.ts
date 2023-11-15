@@ -1,15 +1,30 @@
 import type { NodeOrNull, DivOrNull } from "./gameTypes";
-import { NodeInterface, SnakeLinkedList } from "./gameTypes";
+import { NodeInterface, SnakeLinkedList, PointType } from "./gameTypes";
 
 export const size = 6;
 
-export const newPoint = (r: number, c: number, color: string, size: number) => {
+export const newPoint = (
+  r: number,
+  c: number,
+  size: number,
+  pointType: PointType,
+  color: string = "#43D9AD"
+) => {
   const point = document.createElement("div");
   const grid = document.querySelector(".game-grid") as HTMLDivElement;
 
   //size the pixel
   point.style.height = point.style.width = `${size}px`;
   point.style.backgroundColor = color;
+  if (pointType == PointType.Head) {
+    point.style.borderTopLeftRadius = "50%";
+    point.style.borderTopRightRadius = "50%";
+  }
+  if (pointType == PointType.Food) {
+    point.style.borderRadius = "50%";
+    point.style.boxShadow =
+      "0px 0px 0px 2px rgba(67, 217, 173, 0.5), 0px 0px 2px 5px rgba(67, 217, 173, 0.25)";
+  }
 
   // position the pixel on the grid
   drawPoint(point, r, c, size);
@@ -43,24 +58,25 @@ class Node implements NodeInterface {
     (this.x = x), (this.y = y), (this.next = null);
     this.ref = null;
     this.id = 0;
-    this.drawNode();
+    // this.drawNode();
   }
 
-  drawNode() {
-    this.ref = newPoint(this.y, this.x, "#43D9AD", size);
+  drawNode(pointType: PointType) {
+    this.ref = newPoint(this.y, this.x, size, pointType);
   }
   removeNode() {
     if (this.ref) this.ref.remove();
   }
 
-  move(pY: number, pX: number) {
+  move(pY: number, pX: number, direction: string) {
     const tempY = this.y;
     const tempX = this.x;
 
     this.y = pY;
     this.x = pX;
+
     if (this.ref) drawPoint(this.ref, this.y, this.x, size);
-    if (this.next) this.next.move(tempY, tempX);
+    if (this.next) this.next.move(tempY, tempX, direction);
   }
 }
 
@@ -78,11 +94,13 @@ export class Player implements SnakeLinkedList {
     // console.log(newNode);
     if (!this.head) {
       this.head = this.tail = newNode;
+      this.head.drawNode(PointType.Head);
       return;
     }
 
     this.tail!.next = newNode;
     this.tail = newNode;
+    this.tail.drawNode(PointType.Body);
   }
 
   // Method to print the linked list

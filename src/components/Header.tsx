@@ -19,7 +19,7 @@ const Header: FC = () => {
 
   return (
     <header>
-      <div className="container bg-blue mt-4 md:mt-7 mx-auto ">
+      <div className="container bg-blue mt-4 md:mt-2 mx-auto ">
         <nav className="border-t border-x border-gray rounded-t-lg">
           <ul className="flex h-10 items-center">
             <li className="">
