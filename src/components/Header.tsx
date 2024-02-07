@@ -1,6 +1,7 @@
 import { useAppDispatch } from "../store/hooks";
 import { FC } from "react";
 import { toggleMenu } from "../store/menuSlice";
+import { Link } from "react-router-dom";
 
 const Header: FC = () => {
   const dispatch = useAppDispatch();
@@ -19,48 +20,45 @@ const Header: FC = () => {
 
   return (
     <header>
-      <div className="container bg-blue mt-4 md:mt-2 mx-auto ">
+      <div className=" bg-blue mt-4 md:mt-2">
         <nav className="border-t border-x border-gray rounded-t-lg">
           <ul className="flex h-10 items-center">
             <li className="">
-              <a
-                href="/"
-                className="px-8  py-auto flex mr-24  h-10  items-center lg:px-5"
-              >
+              <p className="px-8  py-auto flex mr-24  h-10  items-center lg:px-5 ">
                 abdulmuizz-hamzat
-              </a>
+              </p>
             </li>
             <li className="hidden lg:block">
-              <a
-                href="/"
+              <Link
+                to="/"
                 className="px-5 py-auto border-x border-gray flex h-10 items-center"
               >
                 _hello
-              </a>
+              </Link>
             </li>
             <li className="hidden lg:block">
-              <a
-                href="/about-me"
+              <Link
+                to="/about-me"
                 className="px-5 py-auto border-r border-gray flex h-10 items-center"
               >
                 _about-me
-              </a>
+              </Link>
             </li>
             <li className="hidden lg:block">
-              <a
-                href="/projects"
+              <Link
+                to="/projects"
                 className="px-5 py-auto border-r border-gray flex h-10 items-center"
               >
                 _projects
-              </a>
+              </Link>
             </li>
             <li className="ml-auto hidden lg:block">
-              <a
-                href="/contact-me"
+              <Link
+                to="/contact-me"
                 className="px-5 py-auto border-l border-gray flex h-10 items-center"
               >
                 _contact-me
-              </a>
+              </Link>
             </li>
             <li className="lg:hidden ml-auto">
               <button
@@ -78,36 +76,36 @@ const Header: FC = () => {
         <nav className="ham-menu hidden w-full lg:hidden alt-main-height bg-blue text-white border-x border-b border-gray">
           <ul>
             <li className="">
-              <a
-                href="/"
+              <Link
+                to="/"
                 className="px-5 border-y border-gray flex h-10 w-full items-center"
               >
                 _hello
-              </a>
+              </Link>
             </li>
             <li className="">
-              <a
-                href="/about-me"
+              <Link
+                to="/about-me"
                 className="px-5 border-y border-gray flex h-10 w-full items-center"
               >
                 _about-me
-              </a>
+              </Link>
             </li>
             <li className="">
-              <a
-                href="/projects"
+              <Link
+                to="/projects"
                 className="px-5 border-y border-gray flex h-10 w-full items-center"
               >
                 _projects
-              </a>
+              </Link>
             </li>
             <li className="">
-              <a
-                href="/contact-me"
+              <Link
+                to="/contact-me"
                 className="px-5 border-y border-gray flex h-10 w-full items-center"
               >
                 _contact-me
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>

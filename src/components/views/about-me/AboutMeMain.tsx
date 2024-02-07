@@ -31,7 +31,7 @@ const AboutMeMain: FC = () => {
         </div>
       </div>
       <div className="flex flex-col lg:flex-row lg:flex-1 w-full overflow-hidden">
-        <article className="about-me-ide lg:w-2/3 overflow-y-scroll border-r border-gray lg:p-5 xl:pr-16">
+        <article className="about-me-ide lg:w-2/3 overflow-y-auto border-r border-gray lg:p-5 xl:pr-16">
           <Routes>
             <Route
               path=":highlight"
@@ -68,7 +68,7 @@ const AboutMeMain: FC = () => {
             // showcase:
           </span>
         </div>
-        <div className="dev-hero lg:w-1/3 py-20 overflow-y-scroll flex flex-col gap-16 items-center ">
+        <div className="dev-hero lg:w-1/3 py-20 overflow-y-auto flex flex-col gap-16 items-center ">
           <img className="w-32" src={profilePic} alt="" />
           <img className="w-32" src={botSleep} alt="" />
         </div>

@@ -168,14 +168,11 @@ class Game implements GameInterface {
       // Ensuring the btn is in the DOM
       startBtn = document.querySelector(".start-btn") as HTMLButtonElement;
     }
-    console.log("I got the button:", this.timesPlayed, startBtn);
     startBtn.addEventListener("click", () => {
-      console.log("i got clicked");
       this.removeFood();
       this.reset();
       gameRef.play();
     });
-    console.log("ive added the listener");
   }
 
   // FOOD GENERATION HELPERS
@@ -223,10 +220,8 @@ class Game implements GameInterface {
       // condition when player eats the food
       if (this.player!.head!.x === food.x && this.player!.head!.y === food.y) {
         this.removeFood();
-        console.log("before: ", gameRef.left);
         --gameRef.left;
         dispatchAsync(reduceLeft);
-        console.log("after: ", gameRef.left);
 
         if (gameRef.left === 0) {
           // Stop when player wins
@@ -264,7 +259,7 @@ class Game implements GameInterface {
 }
 
 const gameRef: Game = new Game();
-document.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("load", function () {
   gameRef.initPlayer();
   gameRef.start();
 });

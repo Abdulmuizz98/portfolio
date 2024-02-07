@@ -17,7 +17,7 @@ const ProjectsSidePane: FC<ProjectsSidePaneProps> = ({ technologies }) => {
   };
 
   return (
-    <div className="side-pane overflow-y-scroll">
+    <div className="side-pane overflow-y-auto">
       <Dropdown
         name="projects"
         classes="lg:border-t-0"
@@ -32,9 +32,13 @@ const ProjectsSidePane: FC<ProjectsSidePaneProps> = ({ technologies }) => {
                     onChange={hanleCheckboxChange}
                     name="projects"
                     id={name}
+                    className="cursor-pointer"
                   />
-                  <label htmlFor={name} className="flex gap-3 items-center">
-                    {icon} {name}
+                  <label
+                    htmlFor={name}
+                    className="flex gap-3 items-center cursor-pointer"
+                  >
+                    {icon} <span>{name}</span>
                   </label>
                 </div>
               ))}

@@ -6,7 +6,7 @@ import { bio, interests, education } from "../../../Data";
 
 const AboutMeSidePane: FC = () => {
   return (
-    <div className="side-pane overflow-y-scroll">
+    <div className="side-pane overflow-y-auto">
       <Dropdown
         name="personal-info"
         classes="lg:border-t-0"
@@ -22,7 +22,7 @@ const AboutMeSidePane: FC = () => {
         name="contacts"
         classes="border-t"
         dropdownBody={
-          <div className="form-check flex flex-col px-8 lg:px-5  gap-2 my-3 text-11">
+          <div className="contacts flex flex-col px-8 lg:px-5  gap-2 my-3 text-11">
             <a
               href="mailto:hamzatabdulmuizz98@gmail.com"
               className="flex items-center gap-3"

@@ -57,7 +57,7 @@ const ProjectsMain: FC<ProjectsMainProps> = ({ projects }) => {
           </div>
         )}
       </div>
-      <div className="projects px-14 pb-14 lg:py-14 flex flex-wrap justify-around gap-y-10 overflow-y-scroll">
+      <div className="projects px-14 pb-14 lg:py-14 flex flex-wrap justify-around gap-y-10  lg:gap-x-8 overflow-y-auto">
         {filteredProjects.length &&
           filteredProjects.map((project, idx) => (
             <ProjectCard

@@ -1,7 +1,5 @@
 import "../../game";
-// import { useEffect } from "react";
 import Key from "../Key";
-// import { gameRef } from "../../game";
 import { useAppSelector } from "../../store/hooks";
 import {
   ApBoltBottomLeft,
@@ -9,18 +7,26 @@ import {
   ApBoltUpLeft,
   ApBoltUpRight,
 } from "../../Icon";
+import Typewriter from "typewriter-effect";
 
 const Home = () => {
   const left = useAppSelector((state) => state.game.left);
   const level = useAppSelector((state) => state.game.level);
   const isInPlay = useAppSelector((state) => state.game.isInPlay);
-  // const isWon = useAppSelector((state) => state.game.isWon);
   const timesPlayed = useAppSelector((state) => state.game.timesPlayed);
 
   console.log(isInPlay, "isInplay");
+  const thingsIDo = [
+    "Full-stack Developer",
+    "Cloud Developer",
+    "Software Engineer",
+    "Anime Fan",
+    "Gamer",
+    "Info-Sec Enthusiast",
+  ];
 
   return (
-    <div className="home page w-full main-height mb-4 md:mb-7 lg:mb-0 border lg:flex flex-col border-gray rounded-b-lg lg:rounded-none  overflow-scroll py-20">
+    <div className="home page w-full main-height mb-4 md:mb-7 lg:mb-0 border lg:flex flex-col border-gray rounded-b-lg lg:rounded-none  overflow-auto py-20">
       <div className="my-auto">
         <div className="flex justify-center items-center xl:gap-x-12">
           <div className="intro w-4/5 lg:w-1/3">
@@ -29,7 +35,22 @@ const Home = () => {
               Abdulmuizz Hamzat
             </p>
             <p className="text-green text-xl lg:text-cyan xl:text-lg font-medium mb-72 lg:mb-12">
-              &gt; Full-stack Software Engineer
+              {/* &gt; Full-stack Software Engineer */}
+              <Typewriter
+                options={{ loop: true, deleteSpeed: 1 }}
+                onInit={(typewriter) => {
+                  typewriter.pauseFor(300).typeString("> ");
+
+                  thingsIDo.forEach((thingIDo) => {
+                    typewriter
+                      .typeString(thingIDo)
+                      .pauseFor(1000)
+                      .deleteChars(thingIDo.length);
+                  });
+
+                  typewriter.start();
+                }}
+              />
             </p>
 
             <div className="text-xs font-medium">

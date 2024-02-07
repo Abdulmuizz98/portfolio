@@ -7,7 +7,7 @@ export default {
       sm: "530px",
       md: "768px",
       lg: "976px",
-      xl: "1200px",
+      xl: "1400px",
     },
     colors: {
       white: "#E5E9F0",

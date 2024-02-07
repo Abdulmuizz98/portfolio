@@ -14,23 +14,29 @@ const Footer = () => {
         pathname === "/" && !isOpen ? "hidden" : ""
       } lg:block`}
     >
-      <div className="container h-10 bg-blue mb-4 md:mb-2 mx-auto  ">
+      <div className=" h-10 bg-blue mb-4 md:mb-2">
         <ul className="footer-lg hidden lg:flex h-10 items-center border-b border-x border-gray rounded-b-lg">
           <li className="">
             <p className="px-5 py-auto flex h-10 items-center">find me on:</p>
           </li>
           <li className="">
             <a
-              href="/"
-              className="px-3 py-auto border-x border-gray flex h-10 items-center"
+              title="twitter profile"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://twitter.com/AbdulmuizzHamz1"
+              className="px-3 py-auto border-x border-gray flex h-10 items-center hover:border-b-[3px] hover:border-b-orange hover:text-white"
             >
               <ApTwitter />
             </a>
           </li>
           <li className="">
             <a
-              href="/about-me"
-              className="px-3 py-auto border-r border-gray flex h-10 items-center"
+              title="linkedin profile"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.linkedin.com/in/abdulmuizzhamz1/"
+              className="px-3 py-auto border-r border-gray flex h-10 items-center hover:border-b-[3px] hover:border-b-orange hover:text-white"
             >
               <ApLinkedIn />
             </a>
@@ -38,8 +44,11 @@ const Footer = () => {
 
           <li className="ml-auto">
             <a
-              href="/contact-me"
-              className="px-5 py-auto border-l border-gray flex h-10 items-center"
+              title="github profile"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/Abdulmuizz98"
+              className="px-5 py-auto border-l border-gray flex h-10 items-center hover:border-b-[3px] hover:border-b-orange hover:text-white"
             >
               <span className="mr-2">@abdulmuizz98 </span> <ApGithub />
             </a>
@@ -51,7 +60,10 @@ const Footer = () => {
           </li>
           <li className="ml-auto">
             <a
-              href="/"
+              title="twitter profile"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://twitter.com/AbdulmuizzHamz1"
               className="px-5 py-auto border-x border-gray flex h-10 items-center"
             >
               <ApTwitter />
@@ -59,7 +71,10 @@ const Footer = () => {
           </li>
           <li className="">
             <a
-              href="/about-me"
+              title="linkedin profile"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.linkedin.com/in/abdulmuizzhamz1/"
               className="px-5 py-auto border-r border-gray flex h-10 items-center"
             >
               <ApLinkedIn />
@@ -67,7 +82,10 @@ const Footer = () => {
           </li>
           <li className="">
             <a
-              href="/about-me"
+              title="github profile"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/Abdulmuizz98"
               className="px-5 py-auto border-gray flex h-10 items-center"
             >
               <ApGithub />

@@ -25,8 +25,7 @@ export const newPoint = (
     point.style.boxShadow =
       "0px 0px 0px 2px rgba(67, 217, 173, 0.5), 0px 0px 2px 5px rgba(67, 217, 173, 0.25)";
   }
-
-  // position the pixel on the grid
+  // position the pixel on the yarngrid
   drawPoint(point, r, c, size);
 
   // display point on the grid
@@ -64,6 +63,7 @@ class Node implements NodeInterface {
   drawNode(pointType: PointType) {
     this.ref = newPoint(this.y, this.x, size, pointType);
   }
+
   removeNode() {
     if (this.ref) this.ref.remove();
   }
@@ -91,7 +91,6 @@ export class Player implements SnakeLinkedList {
   // Method to add a new node to the end of the linked list
   append(x: number, y: number) {
     const newNode = new Node(x, y);
-    // console.log(newNode);
     if (!this.head) {
       this.head = this.tail = newNode;
       this.head.drawNode(PointType.Head);
@@ -107,7 +106,6 @@ export class Player implements SnakeLinkedList {
   print() {
     let current = this.head;
     while (current) {
-      console.log(current.x, current.y);
       current = current.next;
     }
   }

@@ -44,7 +44,7 @@ const getColor = (iconName: string) => {
 
 const ProjectCard: FC<ProjectCardProps> = (project) => {
   return (
-    <div className="project-card">
+    <div className="project-card flex-1">
       <h2 className="card-title mb-4">
         <span className="text-cyan">Project {project.id}</span> // _
         {project.name}
