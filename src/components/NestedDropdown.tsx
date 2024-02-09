@@ -2,6 +2,7 @@ import { FC, useState } from "react";
 import { ApCaretDown, ApMd } from "../Icon";
 import { PiFolderFill } from "react-icons/pi";
 import { NestedDropdownProp } from "./types";
+import { Link } from "react-router-dom";
 
 const NestedDropdown: FC<NestedDropdownProp> = ({ section, iconColor }) => {
   const [isOpen, setIsOpen] = useState(true);
@@ -28,14 +29,14 @@ const NestedDropdown: FC<NestedDropdownProp> = ({ section, iconColor }) => {
       {isOpen && (
         <div className="dropdown-body px-8 lg:px-5 flex flex-col gap-3">
           {section.payload.map((info, idx) => (
-            <a
-              href=""
+            <Link
+              to={`/about-me/${info.highlight}`}
               className="flex pl-6 gap-3 items-center hover:text-white"
               key={idx}
             >
               <ApMd />
               {info.highlight}
-            </a>
+            </Link>
           ))}
         </div>
       )}

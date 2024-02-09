@@ -27,8 +27,8 @@ const technologies: Technologies = {
 };
 
 const getColor = (iconName: string) => {
-  const green = ["Django", "Vue", "Nodejs"];
-  const red = ["JavaScript", "C/C++", "Flask", "CSS"];
+  const green = ["Django", "Vue", "Nodejs", "JavaScript"];
+  const red = ["C/C++", "Flask", "CSS"];
   const blue = ["Python", "React", "TypeScript"];
   let color: string | undefined = "";
 
@@ -44,15 +44,15 @@ const getColor = (iconName: string) => {
 
 const ProjectCard: FC<ProjectCardProps> = (project) => {
   return (
-    <div className="project-card flex-1">
+    <div className="project-card">
       <h2 className="card-title mb-4">
         <span className="text-cyan">Project {project.id}</span> // _
         {project.name}
       </h2>
-      <div className="card-body border border-gray rounded-2xl overflow-hidden w-64">
-        <div className="h-24 relative border-b border-gray overflow-hidden">
+      <div className="card-body border border-gray rounded-2xl overflow-hidden w-72">
+        <div className="h-36 relative border-b border-gray overflow-hidden">
           <img
-            className="w-full h-full"
+            className="bg-contain object-cover w-full h-full"
             src={project.image}
             alt={`The ${project.name} project showcase`}
           />

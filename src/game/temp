@@ -41,7 +41,6 @@ const turnHead = (head: NodeInterface, key: string) => {
 
 // SNAKE MOVEMENT HELPER
 const doMove = (node: NodeInterface, key: string) => {
-  console.log(key);
   let newY = 0,
     newX = 0;
   switch (key) {
@@ -91,7 +90,7 @@ const isNeckPosition = (direction: string, node: NodeInterface) => {
 };
 
 // GAMEPLAY SECTION
-export class Game implements GameInterface {
+class Game implements GameInterface {
   player: PlayerOrNull;
   level: number;
   left: number;
@@ -140,18 +139,17 @@ export class Game implements GameInterface {
         () => doMove(node, "ArrowUp"),
         initialSpeed / this.level
       );
-      document.addEventListener("keydown", (e: KeyboardEvent) =>
-        this.handleKeyDown(e, this.player)
-      );
+      document.addEventListener("keydown", this.handleKeyDown);
     }
   }
-  handleKeyDown(e: KeyboardEvent, player: PlayerOrNull) {
-    const node = player!.head!;
+  handleKeyDown(e: KeyboardEvent) {
+    const node = gameRef.player!.head!;
+
     if (!isNeckPosition(e.key, node)) {
       clearInterval(node.id);
       node.id = setInterval(
         () => doMove(node, e.key),
-        initialSpeed / this.level
+        initialSpeed / gameRef.level
       );
     }
   }
@@ -159,9 +157,7 @@ export class Game implements GameInterface {
     await dispatchAsync(toggleInPlay);
     if (this.player!.head) {
       clearInterval(this.player!.head.id);
-      document.removeEventListener("keydown", (e: KeyboardEvent) =>
-        this.handleKeyDown(e, this.player)
-      );
+      document.removeEventListener("keydown", this.handleKeyDown);
       this.start();
     }
   }
@@ -175,7 +171,7 @@ export class Game implements GameInterface {
     startBtn.addEventListener("click", () => {
       this.removeFood();
       this.reset();
-      this.play();
+      gameRef.play();
     });
   }
 
@@ -224,22 +220,22 @@ export class Game implements GameInterface {
       // condition when player eats the food
       if (this.player!.head!.x === food.x && this.player!.head!.y === food.y) {
         this.removeFood();
-        --this.left;
+        --gameRef.left;
         dispatchAsync(reduceLeft);
 
-        if (this.left === 0) {
+        if (gameRef.left === 0) {
           // Stop when player wins
           clearInterval(playInterval);
-          this.stop();
+          gameRef.stop();
         } else {
           food = this.drawFood();
           this.grow();
 
-          if (this.left === 45) {
-            this.nextLevel();
+          if (gameRef.left === 45) {
+            gameRef.nextLevel();
           }
-          if (this.left === 10) {
-            this.nextLevel();
+          if (gameRef.left === 10) {
+            gameRef.nextLevel();
           }
         }
       }
@@ -256,7 +252,7 @@ export class Game implements GameInterface {
         )
       ) {
         clearInterval(playInterval);
-        this.stop();
+        gameRef.stop();
       }
     }, 1);
   }
@@ -264,7 +260,7 @@ export class Game implements GameInterface {
 
 const gameRef: Game = new Game();
 export { gameRef };
-window.addEventListener("load", function () {
-  gameRef.initPlayer();
-  gameRef.start();
-});
+// window.addEventListener("load", function () {
+//   gameRef.initPlayer();
+//   gameRef.start();
+// });

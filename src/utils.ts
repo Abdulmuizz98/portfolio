@@ -1,4 +1,4 @@
-import { bio, interests, education } from "./Data";
+import { bio, education, funFacts } from "./Data";
 
 export const sendEmail = async (client, emailPayload) => {
   const serviceId = "service_rjuiom7";
@@ -36,8 +36,8 @@ export const getInfoSet = (highlight) => {
   let info = bio.payload.find((info) => info.highlight === highlight);
   if (info) return { info, sectionName: bio.name };
 
-  info = interests.payload.find((info) => info.highlight === highlight);
-  if (info) return { info, sectionName: interests.name };
+  info = funFacts.payload.find((info) => info.highlight === highlight);
+  if (info) return { info, sectionName: funFacts.name };
 
   info = education.payload.find((info) => info.highlight === highlight);
   return { info, sectionName: education.name };
