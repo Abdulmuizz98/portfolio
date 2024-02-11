@@ -28,8 +28,11 @@ const gameSlice = createSlice({
     reduceLeft(state) {
       state.left -= 1;
     },
-    toggleInPlay(state) {
-      state.isInPlay = !state.isInPlay;
+    stopPlay(state) {
+      state.isInPlay = false;
+    },
+    startPlay(state) {
+      state.isInPlay = true;
     },
     playerWon(state) {
       state.isWon = true;
@@ -41,15 +44,24 @@ const gameSlice = createSlice({
       state.level = 1;
       state.left = 50;
     },
+    reload(state) {
+      state.level = 1;
+      state.left = 50;
+      state.timesPlayed = 0;
+      state.isInPlay = false;
+      state.isWon = false;
+    },
   },
 });
 
 export const {
   nextLevel,
   reduceLeft,
-  toggleInPlay,
+  stopPlay,
+  startPlay,
   playerWon,
   reset,
+  reload,
   incrementTimesPlayed,
 } = gameSlice.actions;
 

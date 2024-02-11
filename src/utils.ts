@@ -1,4 +1,5 @@
 import { bio, education, funFacts } from "./Data";
+import { InfoOrUndf } from "./components/types";
 
 export const sendEmail = async (client, emailPayload) => {
   const serviceId = "service_rjuiom7";
@@ -32,13 +33,17 @@ export const formatedDate = () => {
   }`;
 };
 
-export const getInfoSet = (highlight) => {
-  let info = bio.payload.find((info) => info.highlight === highlight);
+export const getInfoSet = (highlight: string) => {
+  let info: InfoOrUndf;
+
+  info = bio.payload.find((info) => info.highlight === highlight);
   if (info) return { info, sectionName: bio.name };
+
+  info = education.payload.find((info) => info.highlight === highlight);
+  if (info) return { info, sectionName: education.name };
 
   info = funFacts.payload.find((info) => info.highlight === highlight);
   if (info) return { info, sectionName: funFacts.name };
 
-  info = education.payload.find((info) => info.highlight === highlight);
-  return { info, sectionName: education.name };
+  return { info, sectionName: "" };
 };

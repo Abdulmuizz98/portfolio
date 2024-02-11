@@ -40,7 +40,7 @@ body {
 
 .home {
   /* background-image: url("./assets/backround_blur_sm.png"); */
-  background: url("../assets/background_blur_sm.png");
+  background: url("https://res.cloudinary.com/dhfmfn3y7/image/upload/v1707658086/portfolio_images/background_blur_sm_phzi5j.png");
   background-repeat: no-repeat;
   background-position: 40% bottom;
 }
@@ -114,7 +114,8 @@ nav {
   position: relative;
 }
 
-header li a:hover,
+header .desktop-menu li a:hover,
+header .ham-menu li a:hover,
 footer li a:hover {
   color: #e5e9f0;
   border-bottom: 3px solid #fea55f;
@@ -153,7 +154,7 @@ footer li a:hover > svg * {
   transition: all 200ms ease-in-out;
 }
 
-.about-me .side-pane .contacts a:hover {
+.about-me .side-pane a:hover {
   text-decoration: underline;
   color: #e5e9f0;
 }
@@ -167,9 +168,9 @@ footer li a:hover > svg * {
   fill: #e5e9f0;
 }
 
-.about-me .side-pane .contacts a:hover svg,
-.about-me .side-pane .contacts a:hover path,
-.about-me .side-pane .contacts a:hover g {
+.about-me .side-pane a:hover svg,
+.about-me .side-pane a:hover path,
+.about-me .side-pane a:hover g {
   fill: #e5e9f0;
 }
 
@@ -224,7 +225,6 @@ footer li a:hover > svg * {
   subtract size of both header from screen height;
   PS: margin size is included */
   min-height: calc(100vh - (74px));
-  max-height: 1000px;
 }
 
 .alt-main-height {
@@ -232,7 +232,6 @@ footer li a:hover > svg * {
   subtract size of both header and footer from screen height;
   PS: margin size is included */
   min-height: calc(100vh - (116px));
-  max-height: 1000px;
 }
 
 .custom-btn {
@@ -323,7 +322,7 @@ svg#caret {
 
 @media (min-width: 976px) {
   .home {
-    background: url("../assets/background_blur_lg.png");
+    background: url("https://res.cloudinary.com/dhfmfn3y7/image/upload/v1707658089/portfolio_images/background_blur_lg_ak40pr.png");
     background-repeat: no-repeat;
     background-size: 60% 120%;
     background-position: 100% 30%;
@@ -331,10 +330,13 @@ svg#caret {
   .main-height {
     min-height: initial;
     height: calc(100vh - 2 * (48.7px));
+    max-height: 1000px;
   }
+
   .alt-main-height {
     min-height: initial;
     height: calc(100vh - 2 * (48.7px));
+    max-height: 1000px;
   }
   .side-pane {
     width: 258.4px;
@@ -373,7 +375,7 @@ div.game-grid {
 }
 .game-container {
   /* background: linear-gradient(67deg, #175553, rgba(67, 217, 173, 0.13)); */
-  background: url("../assets/Background.png");
+  background: url("https://res.cloudinary.com/dhfmfn3y7/image/upload/v1707658064/portfolio_images/Background_axxg7h.png");
   background-size: contain;
   background-repeat: no-repeat;
 }

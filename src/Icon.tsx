@@ -281,17 +281,17 @@ export const ApLink: FC = () => (
   </svg>
 );
 
-export const ApMd: FC = () => (
+export const ApMd: FC<{ color: string }> = ({ color }) => (
   <svg
     width="17"
     height="16"
     viewBox="0 0 17 16"
-    fill="none"
+    fill={`${color ? "color" : "none"}`}
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
       d="M1.44684 0.832031H16.0466C16.2617 0.832031 16.468 0.917486 16.6201 1.0696C16.7722 1.22171 16.8577 1.42801 16.8577 1.64313V14.6207C16.8577 14.8358 16.7722 15.0421 16.6201 15.1942C16.468 15.3463 16.2617 15.4318 16.0466 15.4318H1.44684C1.23172 15.4318 1.02542 15.3463 0.873307 15.1942C0.721197 15.0421 0.635742 14.8358 0.635742 14.6207V1.64313C0.635742 1.42801 0.721197 1.22171 0.873307 1.0696C1.02542 0.917486 1.23172 0.832031 1.44684 0.832031ZM4.69122 10.9707V7.72635L6.31342 9.34854L7.93561 7.72635V10.9707H9.5578V5.29306H7.93561L6.31342 6.91525L4.69122 5.29306H3.06903V10.9707H4.69122ZM13.6133 8.53745V5.29306H11.9911V8.53745H10.3689L12.8022 10.9707L15.2355 8.53745H13.6133Z"
-      fill="#81A1C1"
+      fill={`${color ? color : "#81A1C1"}`}
     />
   </svg>
 );
@@ -319,9 +319,9 @@ export const ApBoltUpRight: FC = () => (
         width="21"
         height="21"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -373,8 +373,8 @@ export const ApBoltUpRight: FC = () => (
         gradientUnits="userSpaceOnUse"
         gradientTransform="translate(8.5 5.5) rotate(90) scale(9.5)"
       >
-        <stop offset="0.151042" stop-color="#217D7A" />
-        <stop offset="1" stop-color="#114B4A" />
+        <stop offset="0.151042" stopColor="#217D7A" />
+        <stop offset="1" stopColor="#114B4A" />
       </radialGradient>
     </defs>
   </svg>
@@ -403,9 +403,9 @@ export const ApBoltUpLeft: FC = () => (
         width="21"
         height="21"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -457,8 +457,8 @@ export const ApBoltUpLeft: FC = () => (
         gradientUnits="userSpaceOnUse"
         gradientTransform="translate(8.5 5.5) rotate(90) scale(9.5)"
       >
-        <stop offset="0.151042" stop-color="#196C6A" />
-        <stop offset="1" stop-color="#114B4A" />
+        <stop offset="0.151042" stopColor="#196C6A" />
+        <stop offset="1" stopColor="#114B4A" />
       </radialGradient>
     </defs>
   </svg>
@@ -487,9 +487,9 @@ export const ApBoltBottomLeft: FC = () => (
         width="21"
         height="21"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -541,8 +541,8 @@ export const ApBoltBottomLeft: FC = () => (
         gradientUnits="userSpaceOnUse"
         gradientTransform="translate(8.5 5.5) rotate(90) scale(9.5)"
       >
-        <stop offset="0.151042" stop-color="#164C51" />
-        <stop offset="1" stop-color="#0D3A40" />
+        <stop offset="0.151042" stopColor="#164C51" />
+        <stop offset="1" stopColor="#0D3A40" />
       </radialGradient>
     </defs>
   </svg>
@@ -571,9 +571,9 @@ export const ApBoltBottomRight: FC = () => (
         width="21"
         height="21"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -625,8 +625,8 @@ export const ApBoltBottomRight: FC = () => (
         gradientUnits="userSpaceOnUse"
         gradientTransform="translate(8.5 5.5) rotate(90) scale(9.5)"
       >
-        <stop offset="0.151042" stop-color="#234B7C" />
-        <stop offset="1" stop-color="#122E4F" />
+        <stop offset="0.151042" stopColor="#234B7C" />
+        <stop offset="1" stopColor="#122E4F" />
       </radialGradient>
     </defs>
   </svg>

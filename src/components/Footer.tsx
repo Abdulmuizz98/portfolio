@@ -6,8 +6,6 @@ const Footer = () => {
   const { pathname } = useLocation();
   const isOpen = useAppSelector((state) => state.menu.isOpen);
 
-  console.log(pathname);
-
   return (
     <footer
       className={`footer ${

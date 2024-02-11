@@ -36,6 +36,14 @@ export default {
       borderRadius: {
         "4xl": "2rem",
       },
+
+      keyframes: {
+        shimmer: {
+          "100%": {
+            transform: "translateX(100%)",
+          },
+        },
+      },
     },
   },
 };

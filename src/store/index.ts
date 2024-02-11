@@ -2,7 +2,6 @@ import { configureStore, PayloadAction } from "@reduxjs/toolkit";
 import checkedSlice from "./checkedSlice";
 import menuSlice from "./menuSlice";
 import gameSlice from "./gameSlice";
-// ...
 
 const store = configureStore({
   reducer: {
@@ -21,7 +20,6 @@ export default store;
 
 export function dispatchAsync(action: () => PayloadAction<void | string | []>) {
   return new Promise((resolve) => {
-    console.log("I entered dispath async o ");
     store.dispatch(action());
     resolve(1);
   });

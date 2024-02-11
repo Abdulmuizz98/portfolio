@@ -1,4 +1,5 @@
-import "../../game";
+// import "../../game";
+import { useEffect } from "react";
 import Key from "../Key";
 import { useAppSelector } from "../../store/hooks";
 import {
@@ -8,14 +9,38 @@ import {
   ApBoltUpRight,
 } from "../../Icon";
 import Typewriter from "typewriter-effect";
+import { Game } from "../../game";
+import { dispatchAsync } from "../../store";
+import { reload } from "../../store/gameSlice";
+import { useDispatch } from "react-redux";
+const gameRef = new Game();
 
 const Home = () => {
   const left = useAppSelector((state) => state.game.left);
   const level = useAppSelector((state) => state.game.level);
   const isInPlay = useAppSelector((state) => state.game.isInPlay);
   const timesPlayed = useAppSelector((state) => state.game.timesPlayed);
+  const dispatch = useDispatch();
 
-  console.log(isInPlay, "isInplay");
+  useEffect(() => {
+    const startup = async () => {
+      await dispatchAsync(reload);
+      await gameRef.reload();
+      gameRef.initPlayer();
+      gameRef.start();
+    };
+
+    startup();
+    return () => {
+      async function cleanup() {
+        await gameRef.stop(true);
+      }
+      cleanup();
+    };
+  }, [dispatch]);
+
+  // console.log(isInPlay, "isInplay");
+  // console.log(timesPlayed, "timesPlayed");
   const thingsIDo = [
     "Full-stack Developer",
     "Cloud Developer",
@@ -26,7 +51,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="home page w-full main-height mb-4 md:mb-7 lg:mb-0 border lg:flex flex-col border-gray rounded-b-lg lg:rounded-none  overflow-auto py-20">
+    <div className="home w-full main-height mb-4 md:mb-7 lg:mb-0 border lg:flex flex-col border-gray rounded-b-lg lg:rounded-none  overflow-auto py-20">
       <div className="my-auto">
         <div className="flex justify-center items-center xl:gap-x-12">
           <div className="intro w-4/5 lg:w-1/3">
@@ -34,7 +59,7 @@ const Home = () => {
             <p className="text-white text-5xl md:text-6xl lg:text-4xl my-2">
               Abdulmuizz Hamzat
             </p>
-            <p className="text-green text-xl lg:text-cyan xl:text-lg font-medium mb-72 lg:mb-12">
+            <div className="text-green text-xl lg:text-cyan xl:text-lg font-medium mb-72 lg:mb-12">
               {/* &gt; Full-stack Software Engineer */}
               <Typewriter
                 options={{ loop: true, deleteSpeed: 1 }}
@@ -51,7 +76,7 @@ const Home = () => {
                   typewriter.start();
                 }}
               />
-            </p>
+            </div>
 
             <div className="text-xs font-medium">
               <p className="hidden xl:block">

@@ -1,13 +1,12 @@
 import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import type { Container, Engine } from "tsparticles-engine";
-// import particlesConfig from "./particles.config";
 import { sideConfetti, starry, colors } from "./particles.config";
 import { loadFull } from "tsparticles";
 
 const ParticlesBg = () => {
   const particlesInit = useCallback(async (engine: Engine) => {
-    console.log(engine);
+    // console.log(engine);
     await loadFull(engine);
   }, []);
 

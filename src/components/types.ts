@@ -11,5 +11,8 @@ export interface Section {
 export interface Info {
   highlight: string;
   contentSmScreen: string;
-  contentLgScreem: string;
+  contentLgScreen: string;
 }
+
+// export type info
+export type InfoOrUndf = Info | undefined;

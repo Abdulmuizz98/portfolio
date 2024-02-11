@@ -4,7 +4,8 @@ import { NodeInterface, GameInterface, PointType } from "./gameTypes";
 import {
   nextLevel,
   reduceLeft,
-  toggleInPlay,
+  stopPlay,
+  startPlay,
   reset,
   incrementTimesPlayed,
 } from "../store/gameSlice";
@@ -41,7 +42,6 @@ const turnHead = (head: NodeInterface, key: string) => {
 
 // SNAKE MOVEMENT HELPER
 const doMove = (node: NodeInterface, key: string) => {
-  console.log(key);
   let newY = 0,
     newX = 0;
   switch (key) {
@@ -104,6 +104,7 @@ export class Game implements GameInterface {
     this.timesPlayed = 0;
     this.player = null;
     this.foodRef = null;
+    this.handleKeyDown = this.handleKeyDown.bind(this);
   }
   initPlayer() {
     this.player = new Player();
@@ -128,6 +129,13 @@ export class Game implements GameInterface {
     this.player?.removePlayer();
     await dispatchAsync(reset);
   }
+  async reload() {
+    this.level = 1;
+    this.left = 50;
+    this.timesPlayed = 0;
+    this.player = null;
+    this.foodRef = null;
+  }
   async nextLevel() {
     this.level++;
     await dispatchAsync(nextLevel);
@@ -140,13 +148,12 @@ export class Game implements GameInterface {
         () => doMove(node, "ArrowUp"),
         initialSpeed / this.level
       );
-      document.addEventListener("keydown", (e: KeyboardEvent) =>
-        this.handleKeyDown(e, this.player)
-      );
+      document.addEventListener("keydown", this.handleKeyDown);
     }
   }
-  handleKeyDown(e: KeyboardEvent, player: PlayerOrNull) {
-    const node = player!.head!;
+
+  handleKeyDown(e: KeyboardEvent) {
+    const node = this.player!.head!;
     if (!isNeckPosition(e.key, node)) {
       clearInterval(node.id);
       node.id = setInterval(
@@ -155,14 +162,13 @@ export class Game implements GameInterface {
       );
     }
   }
-  async stop() {
-    await dispatchAsync(toggleInPlay);
+  async stop(isFinal: boolean) {
+    await dispatchAsync(stopPlay);
+
     if (this.player!.head) {
       clearInterval(this.player!.head.id);
-      document.removeEventListener("keydown", (e: KeyboardEvent) =>
-        this.handleKeyDown(e, this.player)
-      );
-      this.start();
+      document.removeEventListener("keydown", this.handleKeyDown);
+      if (!isFinal) this.start();
     }
   }
 
@@ -170,6 +176,7 @@ export class Game implements GameInterface {
     let startBtn = document.querySelector(".start-btn") as HTMLButtonElement;
     while (!startBtn) {
       // Ensuring the btn is in the DOM
+      console.log("im stuck here");
       startBtn = document.querySelector(".start-btn") as HTMLButtonElement;
     }
     startBtn.addEventListener("click", () => {
@@ -211,7 +218,7 @@ export class Game implements GameInterface {
     this.player!.append(this.player!.tail!.y, this.player!.tail!.x);
   }
   async play() {
-    dispatchAsync(toggleInPlay);
+    dispatchAsync(startPlay);
     dispatchAsync(incrementTimesPlayed);
     this.timesPlayed++;
 
@@ -230,7 +237,7 @@ export class Game implements GameInterface {
         if (this.left === 0) {
           // Stop when player wins
           clearInterval(playInterval);
-          this.stop();
+          this.stop(false);
         } else {
           food = this.drawFood();
           this.grow();
@@ -256,15 +263,8 @@ export class Game implements GameInterface {
         )
       ) {
         clearInterval(playInterval);
-        this.stop();
+        this.stop(false);
       }
     }, 1);
   }
 }
-
-const gameRef: Game = new Game();
-export { gameRef };
-window.addEventListener("load", function () {
-  gameRef.initPlayer();
-  gameRef.start();
-});

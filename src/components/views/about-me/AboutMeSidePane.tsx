@@ -1,10 +1,14 @@
 import { FC } from "react";
 import Dropdown from "../../Dropdown";
-import { ApMail, ApPhone } from "../../../Icon";
+import { ApLink } from "../../../Icon";
 import NestedDropdown from "../../NestedDropdown";
 import { bio, education, funFacts } from "../../../Data";
 
-const AboutMeSidePane: FC = () => {
+interface AboutMeSidePaneProp {
+  currentSection: string;
+}
+
+const AboutMeSidePane: FC<AboutMeSidePaneProp> = () => {
   return (
     <div className="side-pane overflow-y-auto">
       <Dropdown
@@ -19,19 +23,18 @@ const AboutMeSidePane: FC = () => {
         }
       />
       <Dropdown
-        name="contacts"
+        name="my-resume"
         classes="border-t"
         dropdownBody={
-          <div className="contacts flex flex-col px-8 lg:px-5  gap-2 my-3 text-11">
+          <div className="contacts flex flex-col px-8 lg:px-5 gap-2 my-3 text-11">
             <a
-              href="mailto:hamzatabdulmuizz98@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://drive.google.com/file/d/1FwFh1bXzytxxEYuwA3gi_qGGpKYWcklL/view?usp=sharing"
               className="flex items-center gap-3"
             >
-              <ApMail /> hamzatabdulmuizz98@gmail.com
+              <ApLink /> <span>resume</span>
             </a>
-            <p className="flex items-center gap-3">
-              <ApPhone /> +2347034635158
-            </p>
           </div>
         }
       />
