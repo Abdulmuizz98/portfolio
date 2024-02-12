@@ -59,7 +59,7 @@ const technologies = [
 const projects = [
   {
     name: "planpal",
-    url: "/",
+    url: "https://planpal.netlify.app",
     github: "https://github.com/Abdulmuizz98/plan-pal",
     demo: "",
     description:
@@ -114,7 +114,8 @@ const projects = [
   {
     name: "treemap-diagram",
     url: "https://oraio-treemap-diagram.netlify.app",
-    github: "",
+    github:
+      "https://github.com/Abdulmuizz98/freeCodeCamp/tree/main/data-visualization",
     demo: "",
     description:
       "A treemap visualization for video game sales, movie sales and kickstarter pledges.",
@@ -125,7 +126,8 @@ const projects = [
   {
     name: "us-education-choroplethmap",
     url: "https://oraio-us-education-choroplethmap.netlify.app",
-    github: "",
+    github:
+      "https://github.com/Abdulmuizz98/freeCodeCamp/tree/main/data-visualization",
     demo: "",
     description:
       "A choropleth map visualization of the united states educational attainment by county.",
@@ -136,7 +138,8 @@ const projects = [
   {
     name: "temperature-heatmap",
     url: "https://oraio-temperature-heatmap.netlify.app",
-    github: "",
+    github:
+      "https://github.com/Abdulmuizz98/freeCodeCamp/tree/main/data-visualization",
     demo: "test",
     description:
       "Heatmap visualization of the monthly global land-surface temperature from year 1753 to 2015",
@@ -147,7 +150,8 @@ const projects = [
   {
     name: "doping-scatterplot",
     url: "https://oraio-doping-scatterplot.netlify.app",
-    github: "",
+    github:
+      "https://github.com/Abdulmuizz98/freeCodeCamp/tree/main/data-visualization",
     demo: "",
     description:
       "A scatterplot visualization of doping in professional bicycle racing.",
@@ -158,7 +162,8 @@ const projects = [
   {
     name: "us-gdp-barchart",
     url: "https://oraio-us-gdp-barchart.netlify.app",
-    github: "",
+    github:
+      "https://github.com/Abdulmuizz98/freeCodeCamp/tree/main/data-visualization",
     demo: "",
     description: "The United States GDP visualization by bar chart",
     image:
@@ -168,7 +173,8 @@ const projects = [
   {
     name: "pomodoro-clock",
     url: "https://oraio-pomodoro-clock.netlify.app",
-    github: "",
+    github:
+      "https://github.com/Abdulmuizz98/freeCodeCamp/tree/main/frontend-dev-libraries",
     demo: "",
     description: "A flexible 25-5 pomodoro alarm clock. ",
     image:
@@ -178,7 +184,8 @@ const projects = [
   {
     name: "js-calculator",
     url: "https://oraio-js-calculator.netlify.app",
-    github: "",
+    github:
+      "https://github.com/Abdulmuizz98/freeCodeCamp/tree/main/frontend-dev-libraries",
     demo: "",
     description: "A user-friendly javascript calculator.",
     image:
@@ -188,7 +195,8 @@ const projects = [
   {
     name: "drum-machine",
     url: "https://oraio-drum-machine.netlify.app",
-    github: "",
+    github:
+      "https://github.com/Abdulmuizz98/freeCodeCamp/tree/main/frontend-dev-libraries",
     demo: "",
     description:
       "A user-friendly drum machine controllable via mouse or keyboard. It includes features for power, volume, and bank control, enhancing usability.",
@@ -199,7 +207,8 @@ const projects = [
   {
     name: "markdown-previewer",
     url: "https://oraio-markdown-previewer.netlify.app",
-    github: "",
+    github:
+      "https://github.com/Abdulmuizz98/freeCodeCamp/tree/main/frontend-dev-libraries",
     demo: "",
     description: "A flavor rich markdown previewer.",
     image:
@@ -209,7 +218,8 @@ const projects = [
   {
     name: "random-quotes-machine",
     url: "https://oraio-random-quotes-machine.netlify.app",
-    github: "",
+    github:
+      "https://github.com/Abdulmuizz98/freeCodeCamp/tree/main/frontend-dev-libraries",
     demo: "",
     description:
       "A random quote generator with Twitter integration. Users can post generated quotes directly to Twitter if authenticated.",
@@ -220,7 +230,8 @@ const projects = [
   {
     name: "tribute-page",
     url: "https://oraio-markdown-previewer.netlify.app",
-    github: "",
+    github:
+      "https://github.com/Abdulmuizz98/freeCodeCamp/tree/main/responsive-web-design",
     demo: "",
     description:
       "Mastering the fundamentals of responsive web design with a simple tribute page.",
@@ -231,7 +242,8 @@ const projects = [
   {
     name: "technical-docs-page",
     url: "https://oraio-technical-docs-page.netlify.app",
-    github: "",
+    github:
+      "https://github.com/Abdulmuizz98/freeCodeCamp/tree/main/responsive-web-design",
     demo: "",
     description:
       "Mastering the fundamentals of responsive web design with a simple demo technical documentation page",
@@ -242,7 +254,8 @@ const projects = [
   {
     name: "survey-form",
     url: "https://oraio-survey-form.netlify.app",
-    github: "",
+    github:
+      "https://github.com/Abdulmuizz98/freeCodeCamp/tree/main/responsive-web-design",
     demo: "",
     description: "Mastering html forms with a simple survey form.",
     image:
@@ -252,7 +265,8 @@ const projects = [
   {
     name: "product-landing-page",
     url: "https://oraio-product-landing-page.netlify.app",
-    github: "",
+    github:
+      "https://github.com/Abdulmuizz98/freeCodeCamp/tree/main/responsive-web-design",
     demo: "",
     description:
       "Mastering the fundamentals of responsive web design with a simple product landing page.",
@@ -263,7 +277,8 @@ const projects = [
   {
     name: "personal-portfolio-webpage",
     url: "https://oraio-personal-portfolio-webpage.netlify.app",
-    github: "",
+    github:
+      "https://github.com/Abdulmuizz98/freeCodeCamp/tree/main/responsive-web-design",
     demo: "",
     description:
       "Mastering the fundamentals of responsive web design with a simple personal portfolio webpage.",
