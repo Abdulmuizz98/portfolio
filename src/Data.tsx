@@ -327,80 +327,80 @@ export const notFound = {
 export const showcaseData = [
   {
     image:
-      "https://res.cloudinary.com/dhfmfn3y7/image/upload/v1707618707/portfolio_images/with_julien_zruuhm.jpg",
+      "https://res.cloudinary.com/dhfmfn3y7/image/upload/f_auto/portfolio_images/with_julien_zruuhm.jpg",
     alt: "Me and Julien Barbier",
     comment: "Tech Titans Unite: Charting the Future with Julien Barbier 🚀.",
   },
   {
     image:
-      "https://res.cloudinary.com/dhfmfn3y7/image/upload/v1707618696/portfolio_images/interview_studio_yqeg2t.jpg",
+      "https://res.cloudinary.com/dhfmfn3y7/image/upload/f_auto/portfolio_images/interview_studio_yqeg2t.jpg",
     alt: "interview time with fellow challenge winners.",
     comment:
       "Beyond the Challenge: Powering Up with Fellow Champions in the Interview Studio 🌟.",
   },
   {
     image:
-      "https://res.cloudinary.com/dhfmfn3y7/image/upload/v1707618706/portfolio_images/marteen_session_iacpku.jpg",
+      "https://res.cloudinary.com/dhfmfn3y7/image/upload/f_auto/portfolio_images/marteen_session_iacpku.jpg",
     alt: "A Collaborative Session with Cole and Marteen",
     comment:
       "Unlocking Insights: A Collaborative Session with Cole and Marteen 💡.",
   },
   {
     image:
-      "https://res.cloudinary.com/dhfmfn3y7/image/upload/v1707618719/portfolio_images/quading_ujy8c5.jpg",
+      "https://res.cloudinary.com/dhfmfn3y7/image/upload/f_avif/f_avif/portfolio_images/quading_ujy8c5.jpg",
     alt: "Quadbiking with fellow challenge winners.",
     comment:
       "Revving Up Adventure: Conquering Trails with Challenge Champions 🏍️.",
   },
   {
     image:
-      "https://res.cloudinary.com/dhfmfn3y7/image/upload/v1707618642/portfolio_images/winner_gzepqg.png",
+      "https://res.cloudinary.com/dhfmfn3y7/image/upload/f_auto/portfolio_images/winner_gzepqg.png",
     alt: "Challenge 1 Winner Announcement",
     comment: "Challenge 1 Winner. ALX Kigali Retreat Challenge.",
   },
   {
     image:
-      "https://res.cloudinary.com/dhfmfn3y7/image/upload/v1707618634/portfolio_images/lunchwithfred_mfawqz.jpg",
+      "https://res.cloudinary.com/dhfmfn3y7/image/upload/f_auto/portfolio_images/lunchwithfred_mfawqz.jpg",
     alt: "After Lunch with Fred Swaniker with fellow winners",
     comment:
       "Feeding the Future: After savory conversations over lunch with Fred Swaniker and fellow winners 🍽️.",
   },
   {
     image:
-      "https://res.cloudinary.com/dhfmfn3y7/image/upload/v1707618641/portfolio_images/togetheralx2_hewhgg.jpg",
+      "https://res.cloudinary.com/dhfmfn3y7/image/upload/f_auto/portfolio_images/togetheralx2_hewhgg.jpg",
     alt: "Julien and the Challenge Winners on the Red Carpet",
     comment:
       "Glamorous Moments: Julien and the Challenge Winners on the Red Carpet ✨",
   },
   {
     image:
-      "https://res.cloudinary.com/dhfmfn3y7/image/upload/v1707618933/portfolio_images/winner_announcement_gtxwkh.png",
+      "https://res.cloudinary.com/dhfmfn3y7/image/upload/f_auto/portfolio_images/winner_announcement_gtxwkh.png",
     alt: "Winners Announcement, Webfusion Hackathon",
     comment: "Winners Announcement, Webfusion Hackathon: 2nd Runners up",
   },
   {
     image:
-      "https://res.cloudinary.com/dhfmfn3y7/image/upload/v1707618639/portfolio_images/working_on_dtecteet_n82zsy.jpg",
+      "https://res.cloudinary.com/dhfmfn3y7/image/upload/f_auto/portfolio_images/working_on_dtecteet_n82zsy.jpg",
     alt: "working on dtecteet at the Webfusion Hackathon",
     comment:
       " Captured in the Zone working on Dtecteet at the Webfusion Hackathon 🛠️.",
   },
   {
     image:
-      "https://res.cloudinary.com/dhfmfn3y7/image/upload/v1707618667/portfolio_images/team_dtecteet_rmth1r.jpg",
+      "https://res.cloudinary.com/dhfmfn3y7/image/upload/f_auto/portfolio_images/team_dtecteet_rmth1r.jpg",
     alt: "Team Dtecteet at work",
     comment: "Team Dtecteet at work 🌟; #Webfusion_Hackathon.",
   },
   {
     image:
-      "https://res.cloudinary.com/dhfmfn3y7/image/upload/v1707433673/portfolio_images/alx-cert_icwrk9.png",
+      "https://res.cloudinary.com/dhfmfn3y7/image/upload/f_auto/portfolio_images/alx-cert_icwrk9.png",
     alt: "ALX SE Holberton Cert.",
     comment:
       "Unlocking Success: Celebrating the ALX SE Holberton Certificate Achievement 🎓",
   },
   {
     image:
-      "https://res.cloudinary.com/dhfmfn3y7/image/upload/v1707618635/portfolio_images/udacity_cert_gjdeqp.png",
+      "https://res.cloudinary.com/dhfmfn3y7/image/upload/f_auto/portfolio_images/udacity_cert_gjdeqp.png",
     alt: "Udacity Cloud Developer Nanodegree Cert.",
     comment:
       "Cloud Mastery Unveiled: Proudly Displaying the Udacity Cloud Developer Nanodegree Certificate 🌐🎓",

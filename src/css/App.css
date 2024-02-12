@@ -40,7 +40,7 @@ body {
 
 .home {
   /* background-image: url("./assets/backround_blur_sm.png"); */
-  background: url("https://res.cloudinary.com/dhfmfn3y7/image/upload/v1707658086/portfolio_images/background_blur_sm_phzi5j.png");
+  background: url("https://res.cloudinary.com/dhfmfn3y7/image/upload/f_auto/portfolio_images/background_blur_sm_phzi5j.png");
   background-repeat: no-repeat;
   background-position: 40% bottom;
 }
@@ -322,7 +322,7 @@ svg#caret {
 
 @media (min-width: 976px) {
   .home {
-    background: url("https://res.cloudinary.com/dhfmfn3y7/image/upload/v1707658089/portfolio_images/background_blur_lg_ak40pr.png");
+    background: url("https://res.cloudinary.com/dhfmfn3y7/image/upload/f_auto/portfolio_images/background_blur_lg_ak40pr.png");
     background-repeat: no-repeat;
     background-size: 60% 120%;
     background-position: 100% 30%;
@@ -375,7 +375,7 @@ div.game-grid {
 }
 .game-container {
   /* background: linear-gradient(67deg, #175553, rgba(67, 217, 173, 0.13)); */
-  background: url("https://res.cloudinary.com/dhfmfn3y7/image/upload/v1707658064/portfolio_images/Background_axxg7h.png");
+  background: url("https://res.cloudinary.com/dhfmfn3y7/image/upload/f_auto/portfolio_images/Background_axxg7h.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
