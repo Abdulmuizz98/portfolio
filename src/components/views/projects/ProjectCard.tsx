@@ -95,15 +95,30 @@ const ProjectCard: FC<ProjectCardProps> = (project) => {
           <p>{project.description}</p>
           <div className="card-actions flex gap-2">
             {project.url && (
-              <a href={project.url} className="custom-btn ">
+              <a
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="custom-btn "
+              >
                 view-project
               </a>
             )}
-            <a href={project.github} className="custom-btn ">
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="custom-btn "
+            >
               view-repo
             </a>
             {project.demo && (
-              <a href={project.demo} className="custom-btn ">
+              <a
+                href={project.demo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="custom-btn "
+              >
                 demo
               </a>
             )}
