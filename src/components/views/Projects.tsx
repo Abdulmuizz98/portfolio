@@ -59,13 +59,13 @@ const technologies = [
 const projects = [
   {
     name: "planpal",
-    url: "https://planpal.netlify.app",
+    url: "https://plan-pal.netlify.app",
     github: "https://github.com/Abdulmuizz98/plan-pal",
     demo: "",
     description:
       "A serverless task management app. An extra feature of the tool is its ability to attach files to tasks.",
     image:
-      "https://res.cloudinary.com/dhfmfn3y7/image/upload/f_auto/portfolio_images/printf_xqnafd.png",
+      "https://res.cloudinary.com/dhfmfn3y7/image/upload/f_auto/portfolio_images/planpal_gnl8m5.png",
     techs: ["AWS", "TypeScript"],
   },
   {
